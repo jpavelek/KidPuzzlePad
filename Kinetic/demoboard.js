@@ -43,12 +43,12 @@ function initStage(){
 
     var bits = new Array();
     bits.push(new Bit("puppy_head.png",   10, 768-150+10, 130, 130, 343, 67));
-    bits.push(new Bit("puppy_ball.png",  150, 768-150+10, 130, 130, 100, 20));
-    bits.push(new Bit("puppy_legs.png",  290, 768-150+10, 130, 130, 100, 20));
-    bits.push(new Bit("puppy_torso.png", 430, 768-150+10, 130, 130, 100, 20));
-    bits.push(new Bit("puppy_back_leg.png",  570, 768-150+10, 130, 130, 100, 20));
-    bits.push(new Bit("puppy_tail.png",  710, 768-150+10, 130, 130, 100, 20));
-    bits.push(new Bit("puppy_leg.png",   850, 768-150+10, 130, 130, 100, 20));
+    bits.push(new Bit("puppy_ball.png",  150, 768-150+10, 130, 130, 203, 361));
+    bits.push(new Bit("puppy_legs.png",  290, 768-150+10, 130, 130, 430, 255));
+    bits.push(new Bit("puppy_torso.png", 430, 768-150+10, 130, 130, 486, 128));
+    bits.push(new Bit("puppy_back_leg.png",  570, 768-150+10, 130, 130, 624, 411));
+    bits.push(new Bit("puppy_tail.png",  710, 768-150+10, 130, 130, 868, 242));
+    bits.push(new Bit("puppy_leg.png",   850, 768-150+10, 130, 130, 832, 296));
 
     bitsLayer.setAlpha(0.1);
 
@@ -86,14 +86,14 @@ function Bit (imgsrc, ptx, pty, ptw, pth, pbx, pby) {
         bitsLayer.add(kImage);
         kImage.on("dragstart", function() {
             console.log("dragstart")
-            kImage.moveToTop();
+            //kImage.moveToTop();
             stage.onFrame(function(frame) {
                 if (kImage.getWidth() !== bw) {
-                    kImage.width = kImage.width + frame.timeDiff;
-                    kImage.height = kImage.height + frame.timeDiff;
-                    if (kImage.width > bw) {
-                        kImage.width = bw;
-                        kImage.height = bh;
+                    kImage.setWidth(kImage.width + frame.timeDiff);
+                    kImage.setHeight(kImage.height + frame.timeDiff);
+                    if (kImage.getWidth() > bw) {
+                        kImage.setWidth(bw);
+                        kImage.setHeight(bh);
                     }
                 }
                 bitsLayer.draw();
@@ -103,9 +103,27 @@ function Bit (imgsrc, ptx, pty, ptw, pth, pbx, pby) {
         kImage.on("dragend", function() {
             console.log("dragend");
             if ((Math.abs(kImage.x - bx) + Math.abs(kImage.y - by)) < 100) {
-                console.log("Close enough");
+                kImage.x = bx;
+                kImage.y = by;
+                //FIXME - why this does not work?
+                kImage.draggable = false;
+                kImage.off("dragstart, dragend, dragmove");
+                console.log("LOCK is " + kImage.draggable);
             } else {
                 console.log("Too far, move back" + kImage.x + "," + kImage.y);
+                stage.onFrame(function(frame) {
+                                  if (kImage.getWidth() !== tw) {
+                                      kImage.setWidth(kImage.width - frame.timeDiff);
+                                      kImage.setHeight(kImage.height - frame.timeDiff);
+                                      if (kImage.getWidth() < tw) {
+                                          kImage.setWidth(tw);
+                                          kImage.setHeight(th);
+                                          kImage.setPosition(tx,ty);
+                                      }
+                                      bitsLayer.draw();
+                                      stage.start();
+                                  }
+                              });
             }
         });
     };
