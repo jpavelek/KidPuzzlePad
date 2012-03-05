@@ -2,9 +2,12 @@ var lastTrayY = 0;
 var gameWidth = 1024;
 var gameHeight = 768;
 var trayHeight = 150;
+var stage;
+var bitsLayer;
+var background;
+var images = {};
 
 function loadImages(sources, callback) {
-    var images = {};
     var loadedImages = 0;
     var numImages = 0;
     for (var src in sources) {
@@ -21,118 +24,124 @@ function loadImages(sources, callback) {
     }
 }
 
-function isNearOutline(animal, outline) {
-    var a = animal;
-    var o = outline;
-    if (a.x > o.x - 20 && a.x < o.x + 20 && a.y > o.y - 20 && a.y < o.y + 20) {
-        return true;
-    } else {
-        return false;
-    }
-}
-
-function drawBackground(background, images) {
-    var canvas = background.getCanvas();
+function drawBackground() {
     var context = background.getContext();
 
     context.drawImage(images.board, 0, 0);
     context.drawImage(images.tray, 0, gameHeight);
     lastTrayY = gameHeight;
+    console.log("BG drawn");
 }
 
-function initStage(images){
-    var stage = new Kinetic.Stage("container", gameWidth, gameHeight);
-    var background = new Kinetic.Layer();
-    var bitsLayer = new Kinetic.Layer();
-
-    // Bits data - positions, sizes, etc.
-
-    var bits = new Array();
-    bits.push(new Bit("puppy_head.png",  10, 768-150+10, 130, 130, 100, 20, bitsLayer));
-    bits.push(new Bit("puppy_ball.png", 150, 768-150+10, 130, 130, 100, 20, bitsLayer));
-    bits.push(new Bit("puppy_legs.png", 280, 768-150+10, 130, 130, 100, 20, bitsLayer));
-
-    bitsLayer.setAlpha(0.1);
+function initStage(){
+    stage = new Kinetic.Stage("container", gameWidth, gameHeight);
+    background = new Kinetic.Layer();
+    bitsLayer = new Kinetic.Layer();
 
     stage.add(background);
     stage.add(bitsLayer);
 
-    drawBackground(background, images);
+    var bits = new Array();
+    bits.push(new Bit("puppy_head.png",   10, 768-150+10, 130, 130, 343, 67));
+    bits.push(new Bit("puppy_ball.png",  150, 768-150+10, 130, 130, 100, 20));
+    bits.push(new Bit("puppy_legs.png",  290, 768-150+10, 130, 130, 100, 20));
+    bits.push(new Bit("puppy_torso.png", 430, 768-150+10, 130, 130, 100, 20));
+    bits.push(new Bit("puppy_back_leg.png",  570, 768-150+10, 130, 130, 100, 20));
+    bits.push(new Bit("puppy_tail.png",  710, 768-150+10, 130, 130, 100, 20));
+    bits.push(new Bit("puppy_leg.png",   850, 768-150+10, 130, 130, 100, 20));
+
+    bitsLayer.setAlpha(0.1);
+
+    drawBackground(images);
 
     stage.onFrame(function(frame) {
-        animateTray(background, images, frame, stage, bitsLayer);
+        animateTray(frame);
     });
     stage.start();
 }
 
-function Bit (imgsrc, tx, ty, tw, th, bx, by, layer) {
-    this.image = new Image();
-    this.image.src = imgsrc
-    this.tx = tx;
-    this.ty = ty;
-    this.tw = tw;
-    this.th = th;
-    this.bx = bx;
-    this.by = by;
-    this.layer = layer;
-    this.image.onload = this.onMyLoad();
+function Bit (imgsrc, ptx, pty, ptw, pth, pbx, pby) {
+    var image = new Image();
+    image.src = imgsrc
+    var tx = ptx;
+    var ty = pty;
+    var tw = ptw;
+    var th = pth;
+    var bx = pbx;
+    var by = pby;
+    var bw = -1;
+    var bh = -1;
+    var kImage;
+    image.onload = function() {
+        bw = image.width;
+        bh = image.height;
+        kImage = new Kinetic.Image({
+            image: image,
+            x: tx,
+            y: ty,
+            width: tw,
+            height: th,
+            draggable: true
+        });
+        bitsLayer.add(kImage);
+        kImage.on("dragstart", function() {
+            console.log("dragstart")
+            kImage.moveToTop();
+            stage.onFrame(function(frame) {
+                if (kImage.getWidth() !== bw) {
+                    kImage.width = kImage.width + frame.timeDiff;
+                    kImage.height = kImage.height + frame.timeDiff;
+                    if (kImage.width > bw) {
+                        kImage.width = bw;
+                        kImage.height = bh;
+                    }
+                }
+                bitsLayer.draw();
+                stage.start();
+            });
+        });
+        kImage.on("dragend", function() {
+            console.log("dragend");
+            if ((Math.abs(kImage.x - bx) + Math.abs(kImage.y - by)) < 100) {
+                console.log("Close enough");
+            } else {
+                console.log("Too far, move back" + kImage.x + "," + kImage.y);
+            }
+        });
+    };
 }
 
-Bit.prototype.scaleUpTrans = function() {
-    return {
-        width: { from: this.tw, to: this.bw, duration: 1.0, easing: Kinetic.easings.easeOutCubic }
-    }
-};
-
-Bit.prototype.onMyLoad = function() {
-    //take real image sizes from the image, no need to pass
-    this.bw = this.image.width;
-    this.bh = this.image.height;
-    this.kImage = new Kinetic.Image({
-        image: this.image,
-        x: this.tx,
-        y: this.ty,
-        width: this.tw,
-        height: this.th,
-        draggable: true
-    });
-    this.kImage.on("dragstart", function() {
-        this.kImage.moveToTop();
-        this.transition(this.scaleUpTrans);
-        this.layer.draw();
-    });
-    this.layer.add(this.kImage);
-}
-
-
-function animateTray (layer, images, frame, stage, bitsLayer) {
+function animateTray(frame) {
     if (lastTrayY > gameHeight - trayHeight) {
         var newY = lastTrayY - frame.timeDiff;
         if (newY < gameHeight - trayHeight) {
             newY = gameHeight - trayHeight;
         }
-        var context = layer.getContext();
+        var context = background.getContext();
         context.drawImage(images.tray, 0, newY);
         lastTrayY = newY;
-        layer.draw;
-        if (newY == gameHeight - trayHeight) {
+        if (newY === gameHeight - trayHeight) {
+            console.log("Tray in place, now bits")
             stage.onFrame(function(frame){
-                animateBits(bitsLayer, images, frame);
+                animateBits(images, frame);
             });
         }
     }
 }
 
-function animateBits(bitsLayer, images, frame) {
+function animateBits(frame) {
     var alpha = bitsLayer.getAlpha();
     if (alpha < 1.0) {
         alpha = alpha + 3*frame.timeDiff/1000;
         if (alpha > 1.0) alpha = 1.0;
         bitsLayer.setAlpha(alpha);
         bitsLayer.draw();
-        if (alpha === 1.0) bitsLayer.getStage().stop();
+        if (alpha === 1.0) {
+            bitsLayer.getStage().stop();
+            console.log("Bits done")
+        }
     }
-}
+};
 
 
 window.onload = function(){
@@ -141,6 +150,5 @@ window.onload = function(){
         tray: "tray.png",
     };
     loadImages(sources, initStage);
-};
-
+}
 
