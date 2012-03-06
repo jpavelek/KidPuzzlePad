@@ -4,6 +4,7 @@ var gameHeight = 768;
 var trayHeight = 150;
 var stage;
 var bitsLayer;
+var baloonLayer;
 var background;
 var images = {};
 var score;
@@ -16,7 +17,7 @@ function loadImages(sources, callback) {
     for (var src in sources) {
         numImages++;
     }
-    for (var src in sources) {
+    for (src in sources) {
         images[src] = new Image();
         images[src].onload = function() {
                     if (++loadedImages >= numImages) {
@@ -45,7 +46,7 @@ function initStage(){
     stage.add(bitsLayer);
 
     var bits = new Array();
-    bits.push(new Bit("puppy_head.png",   10, 768-150+10, 130, 130, 343, 67, 5));
+    bits.push(new Bit("puppy_head.png",   10, 768-150+10, 130, 130, 341, 67, 5));
     bits.push(new Bit("puppy_ball.png",  150, 768-150+10, 130, 130, 203, 361, 6));
     bits.push(new Bit("puppy_legs.png",  290, 768-150+10, 130, 130, 430, 255, 3));
     bits.push(new Bit("puppy_torso.png", 430, 768-150+10, 130, 130, 486, 128, 2));
@@ -127,7 +128,7 @@ function Bit (imgsrc, ptx, pty, ptw, pth, pbx, pby, pz) {
                 if (score === endgame) {
                     console.log("END GAME");
                     play_multi_sound("applause");
-                    //TODO - baloons
+                    popBaloons(15);
                 }
             } else {
                 play_multi_sound("return");
@@ -137,6 +138,40 @@ function Bit (imgsrc, ptx, pty, ptw, pth, pbx, pby, pz) {
             stage.start();
         });
     };
+}
+
+function popBaloons(pcount) {
+    console.log("POP")
+    var colors = ["red", "blue", "yellow", "green"];
+
+    baloonLayer = new Kinetic.Layer();
+    stage.add(baloonLayer);
+    for (var i=0; i<pcount; i++) {
+        console.log(i)
+        var temp = new Baloon(Math.floor((Math.random()*gameWidth*0.8) + (gameWidth*0.1)), colors[Math.floor(Math.random()*4)]);
+    }
+    baloonLayer.draw();
+}
+
+function Baloon (px, pcolor) {
+console.log(px + " and " + pcolor);
+    var kImage;
+    var p_x = px;
+    var img = new Image();
+    img.src = "baloon_" + pcolor + ".png";
+    img.onload = function () {
+console.log("Loaded " + img.src);
+        kImage = new Kinetic.Image({image: img, x: p_x, y: gameHeight - 1});
+        baloonLayer.add(kImage);
+        kImage.on("mousedown", function() { play_multi_sound("pop"); kImage.hide() });
+        kImage.transition(baloonFloatTrans);
+    };
+    var baloonFloatTransConfig = function () {
+         return {
+            y: { to: -200, duration: (Math.random() + 4)*3 , delay: Math.random()*8}
+         }
+    };
+    var baloonFloatTrans = new Kinetic.Transition(baloonFloatTransConfig);
 }
 
 function animateTray(frame) {

@@ -1,4 +1,4 @@
-var channel_max = 10;										// number of channels
+var channel_max = 5;										// number of channels
 audiochannels = new Array();
 for (a=0;a<channel_max;a++) {									// prepare the channels
     audiochannels[a] = new Array();
