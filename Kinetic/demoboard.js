@@ -9,6 +9,7 @@ var images = {};
 var score;
 var endgame;
 
+
 function loadImages(sources, callback) {
     var loadedImages = 0;
     var numImages = 0;
@@ -77,6 +78,25 @@ function Bit (imgsrc, ptx, pty, ptw, pth, pbx, pby, pz) {
     var bh = -1;
     var kImage;
     var z = pz;
+
+    var returnToTrayTransConfig = function () {
+         return {
+            x: { to: tx, duration: 0.2, easing: Kinetic.easings.easeOutQuart },
+            y: { to: ty, duration: 0.2, easing: Kinetic.easings.easeOutQuart },
+            width: { to: tw, duration: 0.2, easing: Kinetic.easings.easeOutQuart },
+            height: { to: th, duration: 0.2, easing: Kinetic.easings.easeOutQuart }
+         }
+    }
+    var returnToTrayTrans = new Kinetic.Transition(returnToTrayTransConfig);
+
+    var takeFromTrayTransConfig = function () {
+         return {
+            width: { to: bw, duration: 0.2, easing: Kinetic.easings.easeOutQuart },
+            height: { to: bh, duration: 0.2, easing: Kinetic.easings.easeOutQuart }
+         }
+    }
+    var takeFromTrayTrans = new Kinetic.Transition(takeFromTrayTransConfig);
+
     image.onload = function() {
         bw = image.width;
         bh = image.height;
@@ -91,32 +111,19 @@ function Bit (imgsrc, ptx, pty, ptw, pth, pbx, pby, pz) {
         bitsLayer.add(kImage);
         kImage.on("mousedown", function() { play_multi_sound("take") });
         kImage.on("dragstart", function() {
-            console.log("dragstart")
             kImage.moveToTop();
-            stage.onFrame(function(frame) {
-                if (kImage.getWidth() !== bw) {
-                    kImage.setWidth(kImage.width + frame.timeDiff);
-                    kImage.setHeight(kImage.height + frame.timeDiff);
-                    if (kImage.getWidth() > bw) {
-                        kImage.setWidth(bw);
-                        kImage.setHeight(bh);
-                    }
-                }
-                bitsLayer.draw();
-                stage.start();
-            });
+            kImage.transition(takeFromTrayTrans);
         });
         kImage.on("dragend", function() {
-            console.log("dragend");
             kImage.setZIndex(z);
             if ((Math.abs(kImage.x - bx) + Math.abs(kImage.y - by)) < 100) {
                 kImage.x = bx;
                 kImage.y = by;
                 bitsLayer.draw();
-                //FIXME - why this does not work?
-                kImage.draggable = false;
-                kImage.off("dragstart, dragend, dragmove");
-                kImage.listen(false);
+                //FRUSTRATION - why this does not work?
+                    kImage.draggable = false;
+                    kImage.off("dragstart, dragend, dragmove");
+                    kImage.listen(false);
                 //ENDFRUSTRATION
                 play_multi_sound("place");
                 score++;
@@ -126,22 +133,11 @@ function Bit (imgsrc, ptx, pty, ptw, pth, pbx, pby, pz) {
                     //TODO - baloons
                 }
             } else {
-                console.log("Too far, move back" + kImage.x + "," + kImage.y);
                 play_multi_sound("return");
-                stage.onFrame(function(frame) {
-                    if (kImage.getWidth() !== tw) {
-                        kImage.setWidth(kImage.width - frame.timeDiff);
-                        kImage.setHeight(kImage.height - frame.timeDiff);
-                        if (kImage.getWidth() < tw) {
-                            kImage.setWidth(tw);
-                            kImage.setHeight(th);
-                            kImage.setPosition(tx,ty);
-                        }
-                        bitsLayer.draw();
-                        stage.start();
-                    }
-                });
+                kImage.transition(returnToTrayTrans);
             }
+            bitsLayer.draw();
+            stage.start();
         });
     };
 }

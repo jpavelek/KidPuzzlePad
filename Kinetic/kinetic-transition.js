@@ -630,4 +630,15 @@ Kinetic.Circle.prototype.isPaused = isPaused;
 Kinetic.Circle.prototype.removeTransitions = remove;
 Kinetic.Circle.prototype.pauseTransitions = pause;
 Kinetic.Circle.prototype.resumeTransitions = resume;
+
+Kinetic.Image.prototype.transition = transition;
+Kinetic.Image.prototype._runTransitionBlocks = _runTransitionBlocks;
+Kinetic.Image.prototype.transitioningProperties = transitioningProperties;
+Kinetic.Image.prototype._currentTransitions = [];
+Kinetic.Image.prototype._transBlocks = new Kinetic.Queue();
+Kinetic.Image.prototype.isTransitioning = isTransitioning;
+Kinetic.Image.prototype.isPaused = isPaused;
+Kinetic.Image.prototype.removeTransitions = remove;
+Kinetic.Image.prototype.pauseTransitions = pause;
+Kinetic.Image.prototype.resumeTransitions = resume;
 // END UGLY PATCH PROCESS
