@@ -120,11 +120,8 @@ function Bit (imgsrc, ptx, pty, ptw, pth, pbx, pby, pz) {
                 kImage.x = bx;
                 kImage.y = by;
                 bitsLayer.draw();
-                //FRUSTRATION - why this does not work?
-                    kImage.draggable = false;
-                    kImage.off("dragstart, dragend, dragmove");
-                    kImage.listen(false);
-                //ENDFRUSTRATION
+                kImage.draggable(false);
+                kImage.off("mousedown");
                 play_multi_sound("place");
                 score++;
                 if (score === endgame) {
