@@ -89,7 +89,7 @@ function Bit (imgsrc, ptx, pty, ptw, pth, pbx, pby, pz) {
             draggable: true            
         });
         bitsLayer.add(kImage);
-        kImage.on("mousedown", function() { var aTakeBit = new Audio("button-pressed.wav"); aTakeBit.play() } );
+        kImage.on("mousedown", function() { play_multi_sound("take") });
         kImage.on("dragstart", function() {
             console.log("dragstart")
             kImage.moveToTop();
@@ -118,19 +118,16 @@ function Bit (imgsrc, ptx, pty, ptw, pth, pbx, pby, pz) {
                 kImage.off("dragstart, dragend, dragmove");
                 kImage.listen(false);
                 //ENDFRUSTRATION
-                var aPlaceBit = new Audio("message.wav");
-                aPlaceBit.play();
+                play_multi_sound("place");
                 score++;
                 if (score === endgame) {
                     console.log("END GAME");
-                    var aApplause = new Audio("app-6.wav");
-                    aApplause.play();
+                    play_multi_sound("applause");
                     //TODO - baloons
                 }
             } else {
                 console.log("Too far, move back" + kImage.x + "," + kImage.y);
-                var aReturnBit = new Audio("dialog-error.wav");
-                aReturnBit.play();
+                play_multi_sound("return");
                 stage.onFrame(function(frame) {
                     if (kImage.getWidth() !== tw) {
                         kImage.setWidth(kImage.width - frame.timeDiff);
