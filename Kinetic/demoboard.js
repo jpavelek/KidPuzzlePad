@@ -6,6 +6,8 @@ var stage;
 var bitsLayer;
 var background;
 var images = {};
+var score;
+var endgame;
 
 function loadImages(sources, callback) {
     var loadedImages = 0;
@@ -42,13 +44,15 @@ function initStage(){
     stage.add(bitsLayer);
 
     var bits = new Array();
-    bits.push(new Bit("puppy_head.png",   10, 768-150+10, 130, 130, 343, 67));
-    bits.push(new Bit("puppy_ball.png",  150, 768-150+10, 130, 130, 203, 361));
-    bits.push(new Bit("puppy_legs.png",  290, 768-150+10, 130, 130, 430, 255));
-    bits.push(new Bit("puppy_torso.png", 430, 768-150+10, 130, 130, 486, 128));
-    bits.push(new Bit("puppy_back_leg.png",  570, 768-150+10, 130, 130, 624, 411));
-    bits.push(new Bit("puppy_tail.png",  710, 768-150+10, 130, 130, 868, 242));
-    bits.push(new Bit("puppy_leg.png",   850, 768-150+10, 130, 130, 832, 296));
+    bits.push(new Bit("puppy_head.png",   10, 768-150+10, 130, 130, 343, 67, 5));
+    bits.push(new Bit("puppy_ball.png",  150, 768-150+10, 130, 130, 203, 361, 6));
+    bits.push(new Bit("puppy_legs.png",  290, 768-150+10, 130, 130, 430, 255, 3));
+    bits.push(new Bit("puppy_torso.png", 430, 768-150+10, 130, 130, 486, 128, 2));
+    bits.push(new Bit("puppy_back_leg.png",  570, 768-150+10, 130, 130, 624, 411, 0));
+    bits.push(new Bit("puppy_tail.png",  710, 768-150+10, 130, 130, 868, 242, 1));
+    bits.push(new Bit("puppy_leg.png",   850, 768-150+10, 130, 130, 832, 296, 4));
+    endgame = 7;
+    score = 0;
 
     bitsLayer.setAlpha(0.1);
 
@@ -60,7 +64,7 @@ function initStage(){
     stage.start();
 }
 
-function Bit (imgsrc, ptx, pty, ptw, pth, pbx, pby) {
+function Bit (imgsrc, ptx, pty, ptw, pth, pbx, pby, pz) {
     var image = new Image();
     image.src = imgsrc
     var tx = ptx;
@@ -72,6 +76,7 @@ function Bit (imgsrc, ptx, pty, ptw, pth, pbx, pby) {
     var bw = -1;
     var bh = -1;
     var kImage;
+    var z = pz;
     image.onload = function() {
         bw = image.width;
         bh = image.height;
@@ -81,12 +86,13 @@ function Bit (imgsrc, ptx, pty, ptw, pth, pbx, pby) {
             y: ty,
             width: tw,
             height: th,
-            draggable: true
+            draggable: true            
         });
         bitsLayer.add(kImage);
+        kImage.on("mousedown", function() { var aTakeBit = new Audio("button-pressed.wav"); aTakeBit.play() } );
         kImage.on("dragstart", function() {
             console.log("dragstart")
-            //kImage.moveToTop();
+            kImage.moveToTop();
             stage.onFrame(function(frame) {
                 if (kImage.getWidth() !== bw) {
                     kImage.setWidth(kImage.width + frame.timeDiff);
@@ -102,28 +108,42 @@ function Bit (imgsrc, ptx, pty, ptw, pth, pbx, pby) {
         });
         kImage.on("dragend", function() {
             console.log("dragend");
+            kImage.setZIndex(z);
             if ((Math.abs(kImage.x - bx) + Math.abs(kImage.y - by)) < 100) {
                 kImage.x = bx;
                 kImage.y = by;
+                bitsLayer.draw();
                 //FIXME - why this does not work?
                 kImage.draggable = false;
                 kImage.off("dragstart, dragend, dragmove");
-                console.log("LOCK is " + kImage.draggable);
+                kImage.listen(false);
+                //ENDFRUSTRATION
+                var aPlaceBit = new Audio("message.wav");
+                aPlaceBit.play();
+                score++;
+                if (score === endgame) {
+                    console.log("END GAME");
+                    var aApplause = new Audio("app-6.wav");
+                    aApplause.play();
+                    //TODO - baloons
+                }
             } else {
                 console.log("Too far, move back" + kImage.x + "," + kImage.y);
+                var aReturnBit = new Audio("dialog-error.wav");
+                aReturnBit.play();
                 stage.onFrame(function(frame) {
-                                  if (kImage.getWidth() !== tw) {
-                                      kImage.setWidth(kImage.width - frame.timeDiff);
-                                      kImage.setHeight(kImage.height - frame.timeDiff);
-                                      if (kImage.getWidth() < tw) {
-                                          kImage.setWidth(tw);
-                                          kImage.setHeight(th);
-                                          kImage.setPosition(tx,ty);
-                                      }
-                                      bitsLayer.draw();
-                                      stage.start();
-                                  }
-                              });
+                    if (kImage.getWidth() !== tw) {
+                        kImage.setWidth(kImage.width - frame.timeDiff);
+                        kImage.setHeight(kImage.height - frame.timeDiff);
+                        if (kImage.getWidth() < tw) {
+                            kImage.setWidth(tw);
+                            kImage.setHeight(th);
+                            kImage.setPosition(tx,ty);
+                        }
+                        bitsLayer.draw();
+                        stage.start();
+                    }
+                });
             }
         });
     };
