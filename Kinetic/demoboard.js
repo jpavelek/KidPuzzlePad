@@ -5,6 +5,7 @@ var trayHeight = 150;
 var stage;
 var bitsLayer;
 var baloonLayer;
+var ctrlLayer;
 var background;
 var images = {};
 var score;
@@ -34,16 +35,19 @@ function drawBackground() {
     context.drawImage(images.board, 0, 0);
     context.drawImage(images.tray, 0, gameHeight);
     lastTrayY = gameHeight;
-    console.log("BG drawn");
 }
 
 function initStage(){
     stage = new Kinetic.Stage("container", gameWidth, gameHeight);
     background = new Kinetic.Layer();
     bitsLayer = new Kinetic.Layer();
+    ctrlLayer = new Kinetic.Layer();
 
     stage.add(background);
     stage.add(bitsLayer);
+    stage.add(ctrlLayer);
+
+    makeBack();
 
     var bits = new Array();
     bits.push(new Bit("puppy_head.png",   10, 768-150+10, 130, 130, 341, 67, 5));
@@ -65,6 +69,44 @@ function initStage(){
     });
     stage.start();
 }
+
+function makeBack() {
+    var image = new Image;
+    var kImage;
+
+    var clickDownConfig = function () {
+         return {
+            width: { to: image.width - 20, duration: 0.2, easing: Kinetic.easings.easeOutQuart },
+            height: { to: image.height - 20, duration: 0.2, easing: Kinetic.easings.easeOutQuart },
+            x: { to: kImage.x + 10, duration: 0.2, easing: Kinetic.easings.easeOutQuart },
+            y: { to: kImage.y + 10, duration: 0.2, easing: Kinetic.easings.easeOutQuart },
+         }
+    }
+    var clickDownTrans = new Kinetic.Transition(clickDownConfig);
+    var clickUpConfig = function () {
+         return {
+            width: { to: image.width, duration: 0.2, easing: Kinetic.easings.easeOutQuart },
+            height: { to: image.height, duration: 0.2, easing: Kinetic.easings.easeOutQuart },
+            x: { to: gameWidth - image.width, duration: 0.2, easing: Kinetic.easings.easeOutQuart },
+            y: { to: 0, duration: 0.2, easing: Kinetic.easings.easeOutQuart },
+         }
+    }
+    var clickUpTrans = new Kinetic.Transition(clickUpConfig);
+
+    image.src = "back.png";
+    image.onload = function () {
+        kImage = new Kinetic.Image( { x: gameWidth - image.width, y: 0, image: image } );
+        ctrlLayer.add(kImage);
+        kImage.on("click", function() {
+            kImage.transition(clickDownTrans).transition(clickUpTrans);
+        });
+        ctrlLayer.draw();
+    }
+}
+
+
+
+
 
 function Bit (imgsrc, ptx, pty, ptw, pth, pbx, pby, pz) {
     var image = new Image();
@@ -126,7 +168,6 @@ function Bit (imgsrc, ptx, pty, ptw, pth, pbx, pby, pz) {
                 play_multi_sound("place");
                 score++;
                 if (score === endgame) {
-                    console.log("END GAME");
                     play_multi_sound("applause");
                     popBaloons(15);
                 }
@@ -139,6 +180,9 @@ function Bit (imgsrc, ptx, pty, ptw, pth, pbx, pby, pz) {
         });
     };
 }
+
+
+
 
 function popBaloons(pcount) {
     console.log("POP")
@@ -153,6 +197,8 @@ function popBaloons(pcount) {
     baloonLayer.draw();
 }
 
+
+
 function Baloon (px, pcolor) {
 console.log(px + " and " + pcolor);
     var kImage;
@@ -160,7 +206,6 @@ console.log(px + " and " + pcolor);
     var img = new Image();
     img.src = "baloon_" + pcolor + ".png";
     img.onload = function () {
-console.log("Loaded " + img.src);
         kImage = new Kinetic.Image({image: img, x: p_x, y: gameHeight - 1});
         baloonLayer.add(kImage);
         kImage.on("mousedown", function() { play_multi_sound("pop"); kImage.hide() });
@@ -174,6 +219,8 @@ console.log("Loaded " + img.src);
     var baloonFloatTrans = new Kinetic.Transition(baloonFloatTransConfig);
 }
 
+
+
 function animateTray(frame) {
     if (lastTrayY > gameHeight - trayHeight) {
         var newY = lastTrayY - frame.timeDiff;
@@ -184,13 +231,14 @@ function animateTray(frame) {
         context.drawImage(images.tray, 0, newY);
         lastTrayY = newY;
         if (newY === gameHeight - trayHeight) {
-            console.log("Tray in place, now bits")
             stage.onFrame(function(frame){
                 animateBits(images, frame);
             });
         }
     }
 }
+
+
 
 function animateBits(frame) {
     var alpha = bitsLayer.getAlpha();
@@ -201,7 +249,6 @@ function animateBits(frame) {
         bitsLayer.draw();
         if (alpha === 1.0) {
             bitsLayer.getStage().stop();
-            console.log("Bits done")
         }
     }
 };
