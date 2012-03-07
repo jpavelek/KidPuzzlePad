@@ -50,13 +50,13 @@ function initStage(){
     makeBack();
 
     var bits = new Array();
-    bits.push(new Bit("puppy_head.png",   10, 768-150+10, 130, 130, 341, 67, 5));
-    bits.push(new Bit("puppy_ball.png",  150, 768-150+10, 130, 130, 203, 361, 6));
-    bits.push(new Bit("puppy_legs.png",  290, 768-150+10, 130, 130, 430, 255, 3));
-    bits.push(new Bit("puppy_torso.png", 430, 768-150+10, 130, 130, 486, 128, 2));
-    bits.push(new Bit("puppy_back_leg.png",  570, 768-150+10, 130, 130, 624, 411, 0));
-    bits.push(new Bit("puppy_tail.png",  710, 768-150+10, 130, 130, 868, 242, 1));
-    bits.push(new Bit("puppy_leg.png",   850, 768-150+10, 130, 130, 832, 296, 4));
+    bits.push(new Bit("puppy_head.png",   10, 768-150+10, 128, 130, 272, 59, 5));
+    bits.push(new Bit("puppy_ball.png",  150, 768-150+10, 130, 130, 133, 362, 6));
+    bits.push(new Bit("puppy_legs.png",  290, 768-150+10, 107, 130, 367, 257, 3));
+    bits.push(new Bit("puppy_torso.png", 430, 768-150+10, 130, 92, 420, 120, 2));
+    bits.push(new Bit("puppy_back_leg.png",  570, 768-150+10, 130, 73, 565, 416, 0));
+    bits.push(new Bit("puppy_tail.png",  710, 768-150+10, 130, 66, 818, 243, 1));
+    bits.push(new Bit("puppy_leg.png",   850, 768-150+10, 56, 130, 774, 290, 4));
     endgame = 7;
     score = 0;
 
@@ -158,6 +158,7 @@ function Bit (imgsrc, ptx, pty, ptw, pth, pbx, pby, pz) {
             kImage.transition(takeFromTrayTrans);
         });
         kImage.on("dragend", function() {
+                      console.log("Release at " + kImage.x + "x" + kImage.y)
             kImage.setZIndex(z);
             if ((Math.abs(kImage.x - bx) + Math.abs(kImage.y - by)) < 100) {
                 kImage.x = bx;
