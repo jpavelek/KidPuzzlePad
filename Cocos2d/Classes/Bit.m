@@ -22,6 +22,7 @@
 @synthesize boardX;
 @synthesize boardY;
 @synthesize locked;
+@synthesize zorder;
 
 -(id)init: (NSString*)fname
 {
@@ -31,7 +32,7 @@
     return self;
 }
 
--(void)setData: (int)ptx trayY:(int)pty trayW:(int)ptw trayH:(int)pth boardX:(int)pbx boardY:(int)pby
+-(void)setData: (int)ptx trayY:(int)pty trayW:(int)ptw trayH:(int)pth boardX:(int)pbx boardY:(int)pby z:(int)pz
 {
     trayX = ptx;
     trayY = pty;
@@ -39,6 +40,7 @@
     trayH = pth;
     boardX = pbx;
     boardY = pby;
+    zorder = pz;
     if (trayW != -1) {
         inscale = trayW/insprite.boundingBox.size.width;
     } else {
@@ -57,6 +59,7 @@
     [insprite stopAllActions];
     id actionPop = [CCScaleTo actionWithDuration: 0.2 scale: 1.0];
     [insprite runAction: [CCEaseInOut actionWithAction: [[actionPop copy] autorelease] rate: 5.0f]];
+    //DOES NOT WORK :( [insprite.parent reorderChild:self z:zorder + 100];
 }
 -(void)back
 {
@@ -72,6 +75,7 @@
 {
     [insprite stopAllActions];
     insprite.position = ccp(boardX, boardY);
+    //DOES NOT WORK :( [insprite.parent reorderChild:self z:zorder];
     locked = YES;
 }
 

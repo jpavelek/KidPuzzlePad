@@ -23,11 +23,12 @@
 @property int boardX;
 @property int boardY;
 @property BOOL locked;
+@property int zorder;
 
 -(id)init: (NSString*)fname;
 -(void)pop;
 -(void)back;
 -(void)snap;
--(void)setData: (int)ptx trayY:(int)pty trayW:(int)ptw trayH:(int)pth boardX:(int)pbx boardY:(int)pby;
+-(void)setData: (int)ptx trayY:(int)pty trayW:(int)ptw trayH:(int)pth boardX:(int)pbx boardY:(int)pby z:(int)pz;
 
 @end

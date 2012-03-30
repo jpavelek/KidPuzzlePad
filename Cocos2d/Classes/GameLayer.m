@@ -13,10 +13,6 @@
 
 @implementation GameLayer
 
-NSMutableArray* bits;
-Bit *currentBit;
-CCSprite *back;
-
 +(CCScene *) scene
 {
 	CCScene *scene = [CCScene node];
@@ -43,13 +39,12 @@ CCSprite *back;
         [self addChild: back];
         
         bits = [[NSMutableArray alloc] init];
-        /*
-         * Here, setup the gameboard for real
-         */
+        balloons = [[NSMutableArray alloc] init];
         
         self.isTouchEnabled = YES;
+        placedTiles = 0;
+        tilecount = -1;
 	}
-    NSLog(@"Done with GameLayer");
 	return self;
 }
 
@@ -65,6 +60,7 @@ CCSprite *back;
                 currentBit = bit;
                 if (bit.locked == NO) {
                     [bit pop];
+                    [self reorderChild:bit.insprite z:bit.zorder+100];
                     [self ccTouchesMoved:touches withEvent:event];
                 } else {
                     NSLog(@"This bit is already locked");
@@ -74,6 +70,12 @@ CCSprite *back;
         }
         if (CGRectContainsPoint(back.boundingBox, location)) {
             NSLog(@"Back pressed");
+        }
+        for (CCSprite *s in balloons) {
+            if (CGRectContainsPoint(s.boundingBox, location)) {
+                //TODO - play sound
+                [s removeFromParentAndCleanup:YES];
+            }
         }
     }
 }
@@ -98,12 +100,36 @@ CCSprite *back;
         location = [[CCDirector sharedDirector] convertToGL: location];
         if ((abs(currentBit.insprite.positionInPixels.x - currentBit.boardX) + abs(currentBit.insprite.positionInPixels.y - currentBit.boardY)) <= 150) {
             [currentBit snap];
+            placedTiles++;
+            if (placedTiles == tilecount) {
+                NSLog(@"END GAME");
+                [self popBalloons];
+            }
         } else {
-            NSLog(@"Too far");
             [currentBit back];
         }
     }
+    [self reorderChild:currentBit.insprite z:currentBit.zorder];
 }
+
+- (void) popBalloons
+{
+    NSArray* ballColors = [NSArray arrayWithObjects:@"baloon_blue.png",@"baloon_green.png",@"baloon_red.png",@"baloon_yellow.png",nil];
+    for (int i=0; i<15; i++) {
+        int cIndex = random()%4;
+        CCSprite* s = [CCSprite spriteWithFile:[ballColors objectAtIndex:cIndex]];
+        int bx = 32 + random()%950;
+        s.position = ccp(bx, 1 - s.boundingBox.size.height/2 - random()%300);
+        [balloons addObject:s];
+        [self addChild:s];
+        [self reorderChild:s z:150];
+        
+        CGPoint r = CGPointMake(bx, 768 + s.boundingBox.size.height);
+        id baloonMove = [CCMoveTo actionWithDuration: (7 + random()%15) position: r];
+        [s runAction: baloonMove];
+    }
+}
+
 
 - (void) dealloc
 {

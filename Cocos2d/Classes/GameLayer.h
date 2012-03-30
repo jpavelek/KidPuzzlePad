@@ -14,9 +14,14 @@
     NSMutableArray* bits;
     Bit *currentBit;
     CCSprite *back;
+    int tilecount;
+    int placedTiles;
+    NSMutableArray* balloons;
+    NSMutableArray* bSpeeds;
 }
 
 // returns a CCScene that contains the GameLayer as the only child
 +(CCScene *) scene;
+-(void)popBalloons;
 
 @end
