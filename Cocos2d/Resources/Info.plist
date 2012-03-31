@@ -8,8 +8,6 @@
 	<string>Puzzle</string>
 	<key>CFBundleExecutable</key>
 	<string>${EXECUTABLE_NAME}</string>
-	<key>initial interface orientation</key>
-	<string>UIInterfaceOrientationLandscapeRight</string>
 	<key>CFBundleIconFile</key>
 	<string></string>
 	<key>CFBundleIconFiles</key>
@@ -17,13 +15,15 @@
 		<string>Icon.png</string>
 	</array>
 	<key>CFBundleIdentifier</key>
-	<string>com.afte9.${PRODUCT_NAME:rfc1034identifier}</string>
+	<string>com.afte9.puzzlefortoddlers</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
 	<string>${PRODUCT_NAME}</string>
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.0</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
@@ -32,8 +32,6 @@
 	<true/>
 	<key>UIPrerenderedIcon</key>
 	<false/>
-	<key>UIStatusBarHidden</key>
-	<true/>
 	<key>UIRequiredDeviceCapabilities</key>
 	<dict>
 		<key>accelerometer</key>
@@ -41,5 +39,14 @@
 		<key>opengles-1</key>
 		<true/>
 	</dict>
+	<key>UIStatusBarHidden</key>
+	<true/>
+	<key>UISupportedInterfaceOrientations</key>
+	<array>
+		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
+	</array>
+	<key>initial interface orientation</key>
+	<string>UIInterfaceOrientationLandscapeRight</string>
 </dict>
 </plist>

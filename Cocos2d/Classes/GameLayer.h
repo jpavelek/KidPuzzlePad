@@ -14,6 +14,7 @@
     NSMutableArray* bits;
     Bit *currentBit;
     CCSprite *back;
+    CCSprite *tray;
     int tilecount;
     int placedTiles;
     NSMutableArray* balloons;

@@ -9,6 +9,7 @@
 
 #import "GameLayer.h"
 #import "CCTouchDispatcher.h"
+#import "SimpleAudioEngine.h"
 #import "Bit.h"
 
 @implementation GameLayer
@@ -26,12 +27,12 @@
 	if( (self=[super init])) {
         CCSprite *bg;
         bg = [CCSprite spriteWithFile: @"puppy_board.png"];
-        bg.anchorPoint = CGPointMake(0, 0);
+        bg.anchorPoint = CGPointMake(0.0, 0.0);
         [self addChild: bg];
         
-        CCSprite *tray;
         tray = [CCSprite spriteWithFile: @"tray.png"];
-        tray.anchorPoint =  CGPointMake(0, 0);
+        tray.anchorPoint =  CGPointMake(0.0, 1.0);
+        tray.position = ccp(0 ,150);
         [self addChild: tray];
         
         back = [CCSprite spriteWithFile: @"back.png"];
@@ -73,8 +74,10 @@
         }
         for (CCSprite *s in balloons) {
             if (CGRectContainsPoint(s.boundingBox, location)) {
-                //TODO - play sound
+                [[SimpleAudioEngine sharedEngine] playEffect:@"pop.wav"];
                 [s removeFromParentAndCleanup:YES];
+                [balloons removeObject:s];
+                break;
             }
         }
     }
@@ -114,6 +117,7 @@
 
 - (void) popBalloons
 {
+    [[SimpleAudioEngine sharedEngine] playEffect:@"app-6.wav"];
     NSArray* ballColors = [NSArray arrayWithObjects:@"baloon_blue.png",@"baloon_green.png",@"baloon_red.png",@"baloon_yellow.png",nil];
     for (int i=0; i<15; i++) {
         int cIndex = random()%4;
@@ -128,6 +132,8 @@
         id baloonMove = [CCMoveTo actionWithDuration: (7 + random()%15) position: r];
         [s runAction: baloonMove];
     }
+    id actionTraySlideout = [CCMoveTo actionWithDuration: 1.0 position: CGPointMake(0, 0)];
+    [tray runAction: [CCEaseInOut actionWithAction: [[actionTraySlideout copy] autorelease] rate: 5.0f]];
 }
 
 

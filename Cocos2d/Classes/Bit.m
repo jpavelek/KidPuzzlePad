@@ -7,7 +7,7 @@
 //
 
 #import "Bit.h"
-
+#import "SimpleAudioEngine.h"
 
 @implementation Bit
 
@@ -56,14 +56,16 @@
 
 -(void)pop
 {
-    [insprite stopAllActions];
+    //[insprite stopAllActions];
+    [[SimpleAudioEngine sharedEngine] playEffect:@"message.wav"];
     id actionPop = [CCScaleTo actionWithDuration: 0.2 scale: 1.0];
     [insprite runAction: [CCEaseInOut actionWithAction: [[actionPop copy] autorelease] rate: 5.0f]];
     //DOES NOT WORK :( [insprite.parent reorderChild:self z:zorder + 100];
 }
 -(void)back
 {
-    [insprite stopAllActions];
+    //[insprite stopAllActions];
+    [[SimpleAudioEngine sharedEngine] playEffect:@"dialog-error.wav"];
     id actionBackScale = [CCScaleTo actionWithDuration: 0.2 scale: inscale];
     //[insprite runAction: [CCEaseInOut actionWithAction: [[actionBackScale copy] autorelease] rate: 5.0f]];
     CGPoint r = CGPointMake(trayXX, trayYY);
@@ -73,7 +75,8 @@
 }
 -(void)snap
 {
-    [insprite stopAllActions];
+    //[insprite stopAllActions];
+    [[SimpleAudioEngine sharedEngine] playEffect:@"button-pressed.wav"];
     insprite.position = ccp(boardX, boardY);
     //DOES NOT WORK :( [insprite.parent reorderChild:self z:zorder];
     locked = YES;

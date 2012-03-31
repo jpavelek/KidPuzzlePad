@@ -40,7 +40,7 @@
         [self addChild:b4.insprite];
         [bits addObject:b4];
         Bit *b5 = [[Bit alloc] init:@"puppy_back_leg.png"];
-        [b5 setData:570 trayY:10 trayW:130 trayH:-1 boardX:646 boardY:306 z:0];
+        [b5 setData:570 trayY:10 trayW:130 trayH:-1 boardX:645 boardY:306 z:0];
         [self addChild:b5.insprite];
         [bits addObject:b5];
         Bit *b6 = [[Bit alloc] init:@"puppy_tail.png"];
