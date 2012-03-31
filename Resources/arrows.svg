@@ -15,7 +15,10 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.48.2 r9819"
-   sodipodi:docname="arrows.svg">
+   sodipodi:docname="arrows.svg"
+   inkscape:export-filename="/home/jakub/Projects/KidPuzzlePad/Cocos2d/Resources/back.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
   <defs
      id="defs4">
     <linearGradient
@@ -336,7 +339,7 @@
        xlink:href="#linearGradient3915"
        id="radialGradient5105"
        gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(0.99994488,0.00810792,-0.00814381,1.0043714,10.045938,353.21249)"
+       gradientTransform="matrix(0.99994488,0.00810792,-0.00814381,1.0043714,374.04594,392.21249)"
        cx="942.73853"
        cy="490.43686"
        fx="942.73853"
@@ -663,13 +666,5 @@
        id="path5093"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="ccccccccc" />
-    <rect
-       ry="46.453213"
-       y="806.98364"
-       x="902.28534"
-       height="92.906425"
-       width="92.906425"
-       id="rect5095"
-       style="opacity:0.26748968;color:#000000;fill:url(#radialGradient5105);fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
   </g>
 </svg>
