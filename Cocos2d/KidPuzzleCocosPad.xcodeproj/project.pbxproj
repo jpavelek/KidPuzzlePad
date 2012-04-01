@@ -58,6 +58,16 @@
 		651BECC715272EB7006A8307 /* MainMenuLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 651BECC615272EB7006A8307 /* MainMenuLayer.m */; };
 		651BECCD15289740006A8307 /* fabric.png in Resources */ = {isa = PBXBuildFile; fileRef = 651BECCC15289740006A8307 /* fabric.png */; };
 		654BC2651523A828003604D4 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 654BC2641523A828003604D4 /* icon.png */; };
+		6565A59A1528F855006719D1 /* bbfish_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = 6565A5941528F855006719D1 /* bbfish_thumb.png */; };
+		6565A59B1528F855006719D1 /* butterfly_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = 6565A5951528F855006719D1 /* butterfly_thumb.png */; };
+		6565A59C1528F855006719D1 /* fish_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = 6565A5961528F855006719D1 /* fish_thumb.png */; };
+		6565A59D1528F855006719D1 /* pets_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = 6565A5971528F855006719D1 /* pets_thumb.png */; };
+		6565A59E1528F855006719D1 /* redfish_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = 6565A5981528F855006719D1 /* redfish_thumb.png */; };
+		6565A59F1528F855006719D1 /* simple_puppy_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = 6565A5991528F855006719D1 /* simple_puppy_thumb.png */; };
+		6565A5A11528FF76006719D1 /* aquarium_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = 6565A5A01528FF76006719D1 /* aquarium_thumb.png */; };
+		6565A5A31528FF83006719D1 /* aquarium2_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = 6565A5A21528FF83006719D1 /* aquarium2_thumb.png */; };
+		6565A5A61528FF9F006719D1 /* info_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = 6565A5A41528FF9F006719D1 /* info_thumb.png */; };
+		6565A5A71528FF9F006719D1 /* nothing_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = 6565A5A51528FF9F006719D1 /* nothing_thumb.png */; };
 		65F095911523B59D00AD71D3 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = 65F095901523B59D00AD71D3 /* back.png */; };
 		65F095941523B83300AD71D3 /* puppy_board.png in Resources */ = {isa = PBXBuildFile; fileRef = 65F095931523B83300AD71D3 /* puppy_board.png */; };
 		65F095A51523B9B700AD71D3 /* tray.png in Resources */ = {isa = PBXBuildFile; fileRef = 65F095A41523B9B700AD71D3 /* tray.png */; };
@@ -322,6 +332,16 @@
 		651BECC615272EB7006A8307 /* MainMenuLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainMenuLayer.m; sourceTree = "<group>"; wrapsLines = 0; };
 		651BECCC15289740006A8307 /* fabric.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fabric.png; sourceTree = "<group>"; };
 		654BC2641523A828003604D4 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		6565A5941528F855006719D1 /* bbfish_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bbfish_thumb.png; sourceTree = "<group>"; };
+		6565A5951528F855006719D1 /* butterfly_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = butterfly_thumb.png; sourceTree = "<group>"; };
+		6565A5961528F855006719D1 /* fish_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fish_thumb.png; sourceTree = "<group>"; };
+		6565A5971528F855006719D1 /* pets_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pets_thumb.png; sourceTree = "<group>"; };
+		6565A5981528F855006719D1 /* redfish_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = redfish_thumb.png; sourceTree = "<group>"; };
+		6565A5991528F855006719D1 /* simple_puppy_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = simple_puppy_thumb.png; sourceTree = "<group>"; };
+		6565A5A01528FF76006719D1 /* aquarium_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = aquarium_thumb.png; sourceTree = "<group>"; };
+		6565A5A21528FF83006719D1 /* aquarium2_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = aquarium2_thumb.png; sourceTree = "<group>"; };
+		6565A5A41528FF9F006719D1 /* info_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = info_thumb.png; sourceTree = "<group>"; };
+		6565A5A51528FF9F006719D1 /* nothing_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nothing_thumb.png; sourceTree = "<group>"; };
 		65F095901523B59D00AD71D3 /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
 		65F095931523B83300AD71D3 /* puppy_board.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = puppy_board.png; sourceTree = "<group>"; };
 		65F095A41523B9B700AD71D3 /* tray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tray.png; sourceTree = "<group>"; };
@@ -702,6 +722,18 @@
 				651BECBB1526DAF1006A8307 /* dialog-error.wav */,
 				651BECB51526DABF006A8307 /* message.wav */,
 				651BECB61526DABF006A8307 /* pop.wav */,
+				6565A5A01528FF76006719D1 /* aquarium_thumb.png */,
+				6565A5A21528FF83006719D1 /* aquarium2_thumb.png */,
+				6565A5941528F855006719D1 /* bbfish_thumb.png */,
+				6565A5951528F855006719D1 /* butterfly_thumb.png */,
+				6565A5961528F855006719D1 /* fish_thumb.png */,
+				6565A5971528F855006719D1 /* pets_thumb.png */,
+				651BECC315272E3C006A8307 /* puppy_thumb.png */,
+				651BECC115272E2E006A8307 /* kitten_thumb.png */,
+				6565A5981528F855006719D1 /* redfish_thumb.png */,
+				6565A5991528F855006719D1 /* simple_puppy_thumb.png */,
+				6565A5A41528FF9F006719D1 /* info_thumb.png */,
+				6565A5A51528FF9F006719D1 /* nothing_thumb.png */,
 				65F099381525CF6B00AD71D3 /* baloon_blue.png */,
 				65F099391525CF6B00AD71D3 /* baloon_green.png */,
 				65F0993A1525CF6B00AD71D3 /* baloon_red.png */,
@@ -714,9 +746,7 @@
 				65F099411525CF6B00AD71D3 /* puppy_torso.png */,
 				65F096AE15249B2900AD71D3 /* puppy_head.png */,
 				65F095931523B83300AD71D3 /* puppy_board.png */,
-				651BECC315272E3C006A8307 /* puppy_thumb.png */,
 				651BECBF15272E24006A8307 /* kitten_board.png */,
-				651BECC115272E2E006A8307 /* kitten_thumb.png */,
 				65F095A41523B9B700AD71D3 /* tray.png */,
 				65F095901523B59D00AD71D3 /* back.png */,
 				654BC2641523A828003604D4 /* icon.png */,
@@ -1179,6 +1209,16 @@
 				651BECC215272E2E006A8307 /* kitten_thumb.png in Resources */,
 				651BECC415272E3C006A8307 /* puppy_thumb.png in Resources */,
 				651BECCD15289740006A8307 /* fabric.png in Resources */,
+				6565A59A1528F855006719D1 /* bbfish_thumb.png in Resources */,
+				6565A59B1528F855006719D1 /* butterfly_thumb.png in Resources */,
+				6565A59C1528F855006719D1 /* fish_thumb.png in Resources */,
+				6565A59D1528F855006719D1 /* pets_thumb.png in Resources */,
+				6565A59E1528F855006719D1 /* redfish_thumb.png in Resources */,
+				6565A59F1528F855006719D1 /* simple_puppy_thumb.png in Resources */,
+				6565A5A11528FF76006719D1 /* aquarium_thumb.png in Resources */,
+				6565A5A31528FF83006719D1 /* aquarium2_thumb.png in Resources */,
+				6565A5A61528FF9F006719D1 /* info_thumb.png in Resources */,
+				6565A5A71528FF9F006719D1 /* nothing_thumb.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
