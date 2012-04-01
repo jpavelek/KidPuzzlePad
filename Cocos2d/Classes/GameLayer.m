@@ -63,14 +63,11 @@
                     [bit pop];
                     [self reorderChild:bit.insprite z:bit.zorder+100];
                     [self ccTouchesMoved:touches withEvent:event];
-                } else {
-                    NSLog(@"This bit is already locked");
-                }
-
+                } 
             }
         }
         if (CGRectContainsPoint(back.boundingBox, location)) {
-            NSLog(@"Back pressed");
+            [[CCDirector sharedDirector] popScene];
         }
         for (CCSprite *s in balloons) {
             if (CGRectContainsPoint(s.boundingBox, location)) {

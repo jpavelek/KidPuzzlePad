@@ -10,7 +10,7 @@
 
 #import "KidPuzzleCocosPadAppDelegate.h"
 #import "GameConfig.h"
-#import "BoardPuppy.h"
+#import "MainMenuLayer.h"
 #import "RootViewController.h"
 
 @implementation KidPuzzleCocosPadAppDelegate
@@ -110,7 +110,7 @@
 	[self removeStartupFlicker];
 	
 	// Run the intro Scene
-	[[CCDirector sharedDirector] runWithScene: [BoardPuppy scene]];
+	[[CCDirector sharedDirector] runWithScene: [MainMenuLayer scene]];
 }
 
 

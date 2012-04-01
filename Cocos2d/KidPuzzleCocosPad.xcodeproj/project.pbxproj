@@ -52,6 +52,13 @@
 		651BECB91526DABF006A8307 /* message.wav in Resources */ = {isa = PBXBuildFile; fileRef = 651BECB51526DABF006A8307 /* message.wav */; };
 		651BECBA1526DABF006A8307 /* pop.wav in Resources */ = {isa = PBXBuildFile; fileRef = 651BECB61526DABF006A8307 /* pop.wav */; };
 		651BECBC1526DAF1006A8307 /* dialog-error.wav in Resources */ = {isa = PBXBuildFile; fileRef = 651BECBB1526DAF1006A8307 /* dialog-error.wav */; };
+		651BECC015272E24006A8307 /* kitten_board.png in Resources */ = {isa = PBXBuildFile; fileRef = 651BECBF15272E24006A8307 /* kitten_board.png */; };
+		651BECC215272E2E006A8307 /* kitten_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = 651BECC115272E2E006A8307 /* kitten_thumb.png */; };
+		651BECC415272E3C006A8307 /* puppy_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = 651BECC315272E3C006A8307 /* puppy_thumb.png */; };
+		651BECC715272EB7006A8307 /* MainMenuLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 651BECC615272EB7006A8307 /* MainMenuLayer.m */; };
+		651BECC915273493006A8307 /* bg1.png in Resources */ = {isa = PBXBuildFile; fileRef = 651BECC815273493006A8307 /* bg1.png */; };
+		651BECCB1527349B006A8307 /* bg2.png in Resources */ = {isa = PBXBuildFile; fileRef = 651BECCA1527349B006A8307 /* bg2.png */; };
+		651BECCD15289740006A8307 /* fabric.png in Resources */ = {isa = PBXBuildFile; fileRef = 651BECCC15289740006A8307 /* fabric.png */; };
 		654BC2651523A828003604D4 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 654BC2641523A828003604D4 /* icon.png */; };
 		65F095911523B59D00AD71D3 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = 65F095901523B59D00AD71D3 /* back.png */; };
 		65F095941523B83300AD71D3 /* puppy_board.png in Resources */ = {isa = PBXBuildFile; fileRef = 65F095931523B83300AD71D3 /* puppy_board.png */; };
@@ -310,6 +317,14 @@
 		651BECB51526DABF006A8307 /* message.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = message.wav; sourceTree = "<group>"; };
 		651BECB61526DABF006A8307 /* pop.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = pop.wav; sourceTree = "<group>"; };
 		651BECBB1526DAF1006A8307 /* dialog-error.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "dialog-error.wav"; sourceTree = "<group>"; };
+		651BECBF15272E24006A8307 /* kitten_board.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kitten_board.png; sourceTree = "<group>"; };
+		651BECC115272E2E006A8307 /* kitten_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kitten_thumb.png; sourceTree = "<group>"; };
+		651BECC315272E3C006A8307 /* puppy_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = puppy_thumb.png; sourceTree = "<group>"; };
+		651BECC515272EB7006A8307 /* MainMenuLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMenuLayer.h; sourceTree = "<group>"; };
+		651BECC615272EB7006A8307 /* MainMenuLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainMenuLayer.m; sourceTree = "<group>"; wrapsLines = 0; };
+		651BECC815273493006A8307 /* bg1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg1.png; sourceTree = "<group>"; };
+		651BECCA1527349B006A8307 /* bg2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg2.png; sourceTree = "<group>"; };
+		651BECCC15289740006A8307 /* fabric.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fabric.png; sourceTree = "<group>"; };
 		654BC2641523A828003604D4 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		65F095901523B59D00AD71D3 /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
 		65F095931523B83300AD71D3 /* puppy_board.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = puppy_board.png; sourceTree = "<group>"; };
@@ -614,6 +629,8 @@
 				65F0965A1524455600AD71D3 /* Bit.m */,
 				65F098DE1525C8DB00AD71D3 /* BoardPuppy.h */,
 				65F098DF1525C8DB00AD71D3 /* BoardPuppy.m */,
+				651BECC515272EB7006A8307 /* MainMenuLayer.h */,
+				651BECC615272EB7006A8307 /* MainMenuLayer.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -683,6 +700,9 @@
 		50F414EB1069373D002A0D5E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				651BECC815273493006A8307 /* bg1.png */,
+				651BECCA1527349B006A8307 /* bg2.png */,
+				651BECCC15289740006A8307 /* fabric.png */,
 				651BECB31526DABF006A8307 /* app-6.wav */,
 				651BECB41526DABF006A8307 /* button-pressed.wav */,
 				651BECBB1526DAF1006A8307 /* dialog-error.wav */,
@@ -700,6 +720,9 @@
 				65F099411525CF6B00AD71D3 /* puppy_torso.png */,
 				65F096AE15249B2900AD71D3 /* puppy_head.png */,
 				65F095931523B83300AD71D3 /* puppy_board.png */,
+				651BECC315272E3C006A8307 /* puppy_thumb.png */,
+				651BECBF15272E24006A8307 /* kitten_board.png */,
+				651BECC115272E2E006A8307 /* kitten_thumb.png */,
 				65F095A41523B9B700AD71D3 /* tray.png */,
 				65F095901523B59D00AD71D3 /* back.png */,
 				654BC2641523A828003604D4 /* icon.png */,
@@ -1158,6 +1181,12 @@
 				651BECB91526DABF006A8307 /* message.wav in Resources */,
 				651BECBA1526DABF006A8307 /* pop.wav in Resources */,
 				651BECBC1526DAF1006A8307 /* dialog-error.wav in Resources */,
+				651BECC015272E24006A8307 /* kitten_board.png in Resources */,
+				651BECC215272E2E006A8307 /* kitten_thumb.png in Resources */,
+				651BECC415272E3C006A8307 /* puppy_thumb.png in Resources */,
+				651BECC915273493006A8307 /* bg1.png in Resources */,
+				651BECCB1527349B006A8307 /* bg2.png in Resources */,
+				651BECCD15289740006A8307 /* fabric.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1174,6 +1203,7 @@
 				E0F80F60120A0182005866B8 /* RootViewController.m in Sources */,
 				65F0965B1524455600AD71D3 /* Bit.m in Sources */,
 				65F098E01525C8DB00AD71D3 /* BoardPuppy.m in Sources */,
+				651BECC715272EB7006A8307 /* MainMenuLayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
