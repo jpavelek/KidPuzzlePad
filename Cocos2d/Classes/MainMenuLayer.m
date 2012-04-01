@@ -37,7 +37,7 @@
                   @"puppy_thumb.png",
                   @"kitten_thumb.png",
                   nil];
-        CCSprite* bg = [CCSprite spriteWithFile: @"fabric.png"]; //FIXME - need better BG!!!
+        CCSprite* bg = [CCSprite spriteWithFile: @"fabric.png"];
         bg.anchorPoint =  CGPointMake(0.0, 0.0);
         bg.position = ccp(0,0);
         [self addChild: bg];
@@ -50,7 +50,10 @@
             p = [CCSprite spriteWithFile:[boards objectAtIndex:i]];
             p.anchorPoint = CGPointMake(0.0, 0.0);
             p.position = ccp(x,y);
+            p.opacity = 0.0;
             [self addChild:p];
+            id opacity = [CCActionTween actionWithDuration:(0.2 + 0.2*(random()%10)) key:@"opacity" from:0.5 to:255];
+            [p runAction: opacity];
         }
         self.isTouchEnabled = YES;
     }
