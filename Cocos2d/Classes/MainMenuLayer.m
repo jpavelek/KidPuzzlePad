@@ -9,6 +9,7 @@
 #import "CCTouchDispatcher.h"
 #import "MainMenuLayer.h"
 #import "BoardPuppy.h"
+#import "BoardBBFish.h"
 
 
 @implementation MainMenuLayer
@@ -100,7 +101,7 @@
             [[CCDirector sharedDirector] pushScene: [BoardPuppy scene]];
             break;
         case 9:
-            [[CCDirector sharedDirector] pushScene: [BoardPuppy scene]];
+            [[CCDirector sharedDirector] pushScene: [BoardBBFish scene]];
             break;
         case 10:
             [[CCDirector sharedDirector] pushScene: [BoardPuppy scene]];

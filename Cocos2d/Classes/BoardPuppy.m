@@ -22,7 +22,7 @@
 
 -(id) init
 {
-	if( (self=[super init])) {
+	if( (self=[super init:@"puppy_board.png"])) {
         Bit *b1 = [[Bit alloc] init:@"puppy_head.png"];
         [b1 setData:10 trayY:10 trayW:-1 trayH:130 boardX:412 boardY:566 z:5];
         [self addChild:b1.insprite];

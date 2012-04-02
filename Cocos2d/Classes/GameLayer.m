@@ -22,11 +22,10 @@
 	return scene;
 }
 
--(id) init
+-(id) init: (NSString*)boardName
 {
 	if( (self=[super init])) {
-        CCSprite *bg;
-        bg = [CCSprite spriteWithFile: @"puppy_board.png"];
+        bg = [CCSprite spriteWithFile: boardName];
         bg.anchorPoint = CGPointMake(0.0, 0.0);
         [self addChild: bg];
         
@@ -38,6 +37,7 @@
         back = [CCSprite spriteWithFile: @"back.png"];
         back.position = ccp(1024 - back.contentSize.width/2, 768 - back.contentSize.height/2);
         [self addChild: back];
+        [self reorderChild:back z:150];
         
         bits = [[NSMutableArray alloc] init];
         balloons = [[NSMutableArray alloc] init];
