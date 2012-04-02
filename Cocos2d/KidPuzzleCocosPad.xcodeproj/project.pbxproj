@@ -68,6 +68,12 @@
 		6560BE85152A32E300223248 /* butterfly_left_top.png in Resources */ = {isa = PBXBuildFile; fileRef = 6560BE81152A32E300223248 /* butterfly_left_top.png */; };
 		6560BE86152A32E300223248 /* butterfly_right_bottom.png in Resources */ = {isa = PBXBuildFile; fileRef = 6560BE82152A32E300223248 /* butterfly_right_bottom.png */; };
 		6560BE87152A32E300223248 /* butterfly_right_top.png in Resources */ = {isa = PBXBuildFile; fileRef = 6560BE83152A32E300223248 /* butterfly_right_top.png */; };
+		6560BE89152A35A900223248 /* pets_board.png in Resources */ = {isa = PBXBuildFile; fileRef = 6560BE88152A35A900223248 /* pets_board.png */; };
+		6560BE8E152A35B900223248 /* pets_bunny.png in Resources */ = {isa = PBXBuildFile; fileRef = 6560BE8A152A35B900223248 /* pets_bunny.png */; };
+		6560BE8F152A35B900223248 /* pets_butterfly.png in Resources */ = {isa = PBXBuildFile; fileRef = 6560BE8B152A35B900223248 /* pets_butterfly.png */; };
+		6560BE90152A35B900223248 /* pets_kitten.png in Resources */ = {isa = PBXBuildFile; fileRef = 6560BE8C152A35B900223248 /* pets_kitten.png */; };
+		6560BE91152A35B900223248 /* pets_puppy.png in Resources */ = {isa = PBXBuildFile; fileRef = 6560BE8D152A35B900223248 /* pets_puppy.png */; };
+		6560BE94152A35C900223248 /* BoardPets.m in Sources */ = {isa = PBXBuildFile; fileRef = 6560BE93152A35C900223248 /* BoardPets.m */; };
 		6565A59A1528F855006719D1 /* bbfish_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = 6565A5941528F855006719D1 /* bbfish_thumb.png */; };
 		6565A59C1528F855006719D1 /* fish_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = 6565A5961528F855006719D1 /* fish_thumb.png */; };
 		6565A59D1528F855006719D1 /* pets_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = 6565A5971528F855006719D1 /* pets_thumb.png */; };
@@ -384,6 +390,13 @@
 		6560BE81152A32E300223248 /* butterfly_left_top.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = butterfly_left_top.png; sourceTree = "<group>"; };
 		6560BE82152A32E300223248 /* butterfly_right_bottom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = butterfly_right_bottom.png; sourceTree = "<group>"; };
 		6560BE83152A32E300223248 /* butterfly_right_top.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = butterfly_right_top.png; sourceTree = "<group>"; };
+		6560BE88152A35A900223248 /* pets_board.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pets_board.png; sourceTree = "<group>"; };
+		6560BE8A152A35B900223248 /* pets_bunny.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pets_bunny.png; sourceTree = "<group>"; };
+		6560BE8B152A35B900223248 /* pets_butterfly.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pets_butterfly.png; sourceTree = "<group>"; };
+		6560BE8C152A35B900223248 /* pets_kitten.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pets_kitten.png; sourceTree = "<group>"; };
+		6560BE8D152A35B900223248 /* pets_puppy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pets_puppy.png; sourceTree = "<group>"; };
+		6560BE92152A35C900223248 /* BoardPets.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BoardPets.h; sourceTree = "<group>"; };
+		6560BE93152A35C900223248 /* BoardPets.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BoardPets.m; sourceTree = "<group>"; };
 		6565A5941528F855006719D1 /* bbfish_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bbfish_thumb.png; sourceTree = "<group>"; };
 		6565A5961528F855006719D1 /* fish_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fish_thumb.png; sourceTree = "<group>"; };
 		6565A5971528F855006719D1 /* pets_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pets_thumb.png; sourceTree = "<group>"; };
@@ -737,6 +750,8 @@
 				65CA3AB41529E39100F4157D /* BoardFish.m */,
 				65CA3AA41529DBCD00F4157D /* BoardKitten.h */,
 				65CA3AA51529DBCD00F4157D /* BoardKitten.m */,
+				6560BE92152A35C900223248 /* BoardPets.h */,
+				6560BE93152A35C900223248 /* BoardPets.m */,
 				65F098DE1525C8DB00AD71D3 /* BoardPuppy.h */,
 				65F098DF1525C8DB00AD71D3 /* BoardPuppy.m */,
 				65CA3AC81529ED7600F4157D /* BoardRedfish.h */,
@@ -860,6 +875,11 @@
 				65CA3A9D1529DB6C00F4157D /* kitten_grass.png */,
 				65CA3A9E1529DB6C00F4157D /* kitten_head.png */,
 				65CA3A981529DB5D00F4157D /* kitten_board.png */,
+				6560BE8A152A35B900223248 /* pets_bunny.png */,
+				6560BE8B152A35B900223248 /* pets_butterfly.png */,
+				6560BE8C152A35B900223248 /* pets_kitten.png */,
+				6560BE8D152A35B900223248 /* pets_puppy.png */,
+				6560BE88152A35A900223248 /* pets_board.png */,
 				65F0993C1525CF6B00AD71D3 /* puppy_back_leg.png */,
 				65F0993D1525CF6B00AD71D3 /* puppy_ball.png */,
 				65F0993E1525CF6B00AD71D3 /* puppy_leg.png */,
@@ -1385,6 +1405,11 @@
 				6560BE85152A32E300223248 /* butterfly_left_top.png in Resources */,
 				6560BE86152A32E300223248 /* butterfly_right_bottom.png in Resources */,
 				6560BE87152A32E300223248 /* butterfly_right_top.png in Resources */,
+				6560BE89152A35A900223248 /* pets_board.png in Resources */,
+				6560BE8E152A35B900223248 /* pets_bunny.png in Resources */,
+				6560BE8F152A35B900223248 /* pets_butterfly.png in Resources */,
+				6560BE90152A35B900223248 /* pets_kitten.png in Resources */,
+				6560BE91152A35B900223248 /* pets_puppy.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1408,6 +1433,7 @@
 				65CA3ACA1529ED7600F4157D /* BoardRedfish.m in Sources */,
 				6560BE6A152A27F800223248 /* BoardSimplePuppy.m in Sources */,
 				6560BE73152A2F2900223248 /* BoardButterfly.m in Sources */,
+				6560BE94152A35C900223248 /* BoardPets.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
