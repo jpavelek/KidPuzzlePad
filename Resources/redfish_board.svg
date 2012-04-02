@@ -18654,7 +18654,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.7549838"
-     inkscape:cx="836.76751"
+     inkscape:cx="624.84243"
      inkscape:cy="272.0065"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
@@ -18676,7 +18676,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -19261,7 +19261,10 @@
        transform="matrix(1.5531267,0,0,1.5531267,-263.23603,-158.35355)" />
     <g
        transform="matrix(-3.433926,-0.1810639,-0.1810639,3.433926,3377.409,826.59228)"
-       id="g69053">
+       id="g69053"
+       inkscape:export-filename="/home/jakub/Projects/KidPuzzlePad/Resources/redfish_body.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90">
       <path
          style="fill:url(#linearGradient69071);fill-opacity:1;stroke:none;filter:url(#filter4160-4)"
          d="m 518.9247,-9.7277108 c -12.40767,1.170534 -5.50151,1.463168 -17.90918,1.638748 -12.40766,0.17558 -22.41573,0.994954 -25.98586,0.117054 -3.57013,-0.877901 -5.73562,-2.6337032 -8.89606,-3.7457112 -3.16045,-1.112008 -5.96973,-1.872855 -5.96973,-1.872855 0,0 -0.0585,-1.170535 1.87286,-1.287588 1.93138,-0.117053 4.79919,0.234107 5.61856,-0.292634 0.81938,-0.52674 1.46317,-2.867809 1.40464,-4.916244 -0.0585,-2.048436 -1.58022,-2.809283 -0.11705,-4.096871 1.46317,-1.287587 3.2775,-3.628657 3.2775,-3.628657 l 19.19676,5.033298 z"
