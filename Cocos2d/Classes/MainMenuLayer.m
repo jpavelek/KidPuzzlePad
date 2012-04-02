@@ -12,6 +12,8 @@
 #import "BoardBBFish.h"
 #import "BoardKitten.h"
 #import "BoardFish.h"
+#import "BoardRedfish.h"
+#import "BoardSimplePuppy.h"
 
 
 @implementation MainMenuLayer
@@ -88,10 +90,10 @@
             //[[CCDirector sharedDirector] pushScene: [BoardPuppy scene]];
             break;
         case 4:
-            [[CCDirector sharedDirector] pushScene: [BoardPuppy scene]];
+            [[CCDirector sharedDirector] pushScene: [BoardRedfish scene]];
             break;
         case 5:
-            [[CCDirector sharedDirector] pushScene: [BoardPuppy scene]];
+            [[CCDirector sharedDirector] pushScene: [BoardSimplePuppy scene]];
             break;
         case 6:
             [[CCDirector sharedDirector] pushScene: [BoardPuppy scene]];

@@ -28,7 +28,7 @@
         [self addChild:b1.insprite];
         [bits addObject:b1];
         Bit *b2 = [[Bit alloc] init:@"fish_fin.png"];
-        [b2 setData:90 trayY:10 trayW:-1 trayH:130 boardX:786 boardY:458 z:0];
+        [b2 setData:90 trayY:10 trayW:-1 trayH:130 boardX:785 boardY:458 z:0];
         [self addChild:b2.insprite];
         [bits addObject:b2];
         Bit *b3 = [[Bit alloc] init:@"fish_bottom.png"];
