@@ -28350,6 +28350,18 @@
          stdDeviation="4.0023646"
          id="feGaussianBlur59896" />
     </filter>
+    <filter
+       inkscape:collect="always"
+       id="filter59946"
+       x="-0.73371429"
+       width="2.4674286"
+       y="-0.05136"
+       height="1.10272">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="4.1069404"
+         id="feGaussianBlur59948" />
+    </filter>
   </defs>
   <sodipodi:namedview
      id="base"
@@ -29042,5 +29054,12 @@
        x="220.3997"
        y="403.16815"
        transform="matrix(1,0,0,1.5705886,-1.9798828,52.073595)" />
+    <rect
+       style="color:#000000;fill:#000000;fill-opacity:0.29680367000000002;fill-rule:nonzero;stroke:none;stroke-width:4;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;filter:url(#filter59946)"
+       id="rect59916"
+       width="13.433917"
+       height="191.9131"
+       x="471.08591"
+       y="706.52722" />
   </g>
 </svg>
