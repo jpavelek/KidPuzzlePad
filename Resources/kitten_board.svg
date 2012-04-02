@@ -15,7 +15,10 @@
    id="svg22684"
    version="1.1"
    inkscape:version="0.48.2 r9819"
-   sodipodi:docname="kitten_board.svg">
+   sodipodi:docname="kitten_board.svg"
+   inkscape:export-filename="/home/jakub/Projects/KidPuzzlePad/Cocos2d/Resources/kitten_board.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
   <defs
      id="defs22686">
     <linearGradient
@@ -24693,7 +24696,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
