@@ -31719,9 +31719,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.80659164"
-     inkscape:cx="542.3933"
-     inkscape:cy="317.89478"
+     inkscape:zoom="1"
+     inkscape:cx="562.24238"
+     inkscape:cy="363.35858"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -31742,7 +31742,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -32456,7 +32456,7 @@
        style="color:#000000;fill:#ffffff;fill-opacity:0.70319633;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
        id="rect34282"
        width="1028.9591"
-       height="770.49353"
+       height="617.56458"
        x="-3.2196724"
        y="284.26382" />
     <path
@@ -32466,10 +32466,11 @@
        inkscape:connector-curvature="0"
        transform="translate(-1.9798828,284.93036)" />
     <path
-       style="fill:none;stroke:#000000;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none;filter:url(#filter34914)"
-       d="M 550.46442,0.57325107 552.94399,361.35061 145.05481,765.52043 m 876.52779,-404.16982 -468.63861,0 233.81739,404.9836"
+       style="fill:none;stroke:#000000;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;filter:url(#filter34914)"
+       d="M 550.46442,0.57325107 552.94399,361.35061 300.05481,607.52043 m 721.52779,-246.16982 -468.63861,0 150.81739,250.9836"
        id="path34864"
        inkscape:connector-curvature="0"
-       transform="translate(-1.9798828,284.93036)" />
+       transform="translate(-1.9798828,284.93036)"
+       sodipodi:nodetypes="cccccc" />
   </g>
 </svg>
