@@ -62,6 +62,12 @@
 		6560BE6E152A2B9900223248 /* simplepuppy_back.png in Resources */ = {isa = PBXBuildFile; fileRef = 6560BE6B152A2B9900223248 /* simplepuppy_back.png */; };
 		6560BE6F152A2B9900223248 /* simplepuppy_front.png in Resources */ = {isa = PBXBuildFile; fileRef = 6560BE6C152A2B9900223248 /* simplepuppy_front.png */; };
 		6560BE70152A2B9900223248 /* simplepuppy_head.png in Resources */ = {isa = PBXBuildFile; fileRef = 6560BE6D152A2B9900223248 /* simplepuppy_head.png */; };
+		6560BE73152A2F2900223248 /* BoardButterfly.m in Sources */ = {isa = PBXBuildFile; fileRef = 6560BE72152A2F2900223248 /* BoardButterfly.m */; };
+		6560BE7F152A32D300223248 /* butterfly_board.png in Resources */ = {isa = PBXBuildFile; fileRef = 6560BE7E152A32D300223248 /* butterfly_board.png */; };
+		6560BE84152A32E300223248 /* butterfly_left_bottom.png in Resources */ = {isa = PBXBuildFile; fileRef = 6560BE80152A32E300223248 /* butterfly_left_bottom.png */; };
+		6560BE85152A32E300223248 /* butterfly_left_top.png in Resources */ = {isa = PBXBuildFile; fileRef = 6560BE81152A32E300223248 /* butterfly_left_top.png */; };
+		6560BE86152A32E300223248 /* butterfly_right_bottom.png in Resources */ = {isa = PBXBuildFile; fileRef = 6560BE82152A32E300223248 /* butterfly_right_bottom.png */; };
+		6560BE87152A32E300223248 /* butterfly_right_top.png in Resources */ = {isa = PBXBuildFile; fileRef = 6560BE83152A32E300223248 /* butterfly_right_top.png */; };
 		6565A59A1528F855006719D1 /* bbfish_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = 6565A5941528F855006719D1 /* bbfish_thumb.png */; };
 		6565A59C1528F855006719D1 /* fish_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = 6565A5961528F855006719D1 /* fish_thumb.png */; };
 		6565A59D1528F855006719D1 /* pets_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = 6565A5971528F855006719D1 /* pets_thumb.png */; };
@@ -371,6 +377,13 @@
 		6560BE6B152A2B9900223248 /* simplepuppy_back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = simplepuppy_back.png; sourceTree = "<group>"; };
 		6560BE6C152A2B9900223248 /* simplepuppy_front.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = simplepuppy_front.png; sourceTree = "<group>"; };
 		6560BE6D152A2B9900223248 /* simplepuppy_head.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = simplepuppy_head.png; sourceTree = "<group>"; };
+		6560BE71152A2F2900223248 /* BoardButterfly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BoardButterfly.h; sourceTree = "<group>"; };
+		6560BE72152A2F2900223248 /* BoardButterfly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BoardButterfly.m; sourceTree = "<group>"; };
+		6560BE7E152A32D300223248 /* butterfly_board.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = butterfly_board.png; sourceTree = "<group>"; };
+		6560BE80152A32E300223248 /* butterfly_left_bottom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = butterfly_left_bottom.png; sourceTree = "<group>"; };
+		6560BE81152A32E300223248 /* butterfly_left_top.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = butterfly_left_top.png; sourceTree = "<group>"; };
+		6560BE82152A32E300223248 /* butterfly_right_bottom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = butterfly_right_bottom.png; sourceTree = "<group>"; };
+		6560BE83152A32E300223248 /* butterfly_right_top.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = butterfly_right_top.png; sourceTree = "<group>"; };
 		6565A5941528F855006719D1 /* bbfish_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bbfish_thumb.png; sourceTree = "<group>"; };
 		6565A5961528F855006719D1 /* fish_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fish_thumb.png; sourceTree = "<group>"; };
 		6565A5971528F855006719D1 /* pets_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pets_thumb.png; sourceTree = "<group>"; };
@@ -718,6 +731,8 @@
 				65F0965A1524455600AD71D3 /* Bit.m */,
 				6565A5BC152993BA006719D1 /* BoardBBFish.h */,
 				6565A5BD152993BA006719D1 /* BoardBBFish.m */,
+				6560BE71152A2F2900223248 /* BoardButterfly.h */,
+				6560BE72152A2F2900223248 /* BoardButterfly.m */,
 				65CA3AB31529E39100F4157D /* BoardFish.h */,
 				65CA3AB41529E39100F4157D /* BoardFish.m */,
 				65CA3AA41529DBCD00F4157D /* BoardKitten.h */,
@@ -827,6 +842,11 @@
 				65CA3A901529D27D00F4157D /* bbfish_head.png */,
 				65CA3A911529D27D00F4157D /* bbfish_tail.png */,
 				65CA3A961529D58600F4157D /* bbfish_board.png */,
+				6560BE80152A32E300223248 /* butterfly_left_bottom.png */,
+				6560BE81152A32E300223248 /* butterfly_left_top.png */,
+				6560BE82152A32E300223248 /* butterfly_right_bottom.png */,
+				6560BE83152A32E300223248 /* butterfly_right_top.png */,
+				6560BE7E152A32D300223248 /* butterfly_board.png */,
 				65CA3ABA1529E73100F4157D /* fish_bottom.png */,
 				65CA3AB81529E6EE00F4157D /* fish_bottom_left.png */,
 				65CA3AA91529E37C00F4157D /* fish_center.png */,
@@ -1360,6 +1380,11 @@
 				6560BE6E152A2B9900223248 /* simplepuppy_back.png in Resources */,
 				6560BE6F152A2B9900223248 /* simplepuppy_front.png in Resources */,
 				6560BE70152A2B9900223248 /* simplepuppy_head.png in Resources */,
+				6560BE7F152A32D300223248 /* butterfly_board.png in Resources */,
+				6560BE84152A32E300223248 /* butterfly_left_bottom.png in Resources */,
+				6560BE85152A32E300223248 /* butterfly_left_top.png in Resources */,
+				6560BE86152A32E300223248 /* butterfly_right_bottom.png in Resources */,
+				6560BE87152A32E300223248 /* butterfly_right_top.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1382,6 +1407,7 @@
 				65CA3AB51529E39100F4157D /* BoardFish.m in Sources */,
 				65CA3ACA1529ED7600F4157D /* BoardRedfish.m in Sources */,
 				6560BE6A152A27F800223248 /* BoardSimplePuppy.m in Sources */,
+				6560BE73152A2F2900223248 /* BoardButterfly.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
