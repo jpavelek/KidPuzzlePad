@@ -66,10 +66,10 @@
 {
     //[insprite stopAllActions];
     [[SimpleAudioEngine sharedEngine] playEffect:@"dialog-error.wav"];
-    id actionBackScale = [CCScaleTo actionWithDuration: 0.2 scale: inscale];
+    id actionBackScale = [CCScaleTo actionWithDuration: 0.1 scale: inscale];
     //[insprite runAction: [CCEaseInOut actionWithAction: [[actionBackScale copy] autorelease] rate: 5.0f]];
     CGPoint r = CGPointMake(trayXX, trayYY);
-    id actionBackMove = [CCMoveTo actionWithDuration: 0.2 position: r];
+    id actionBackMove = [CCMoveTo actionWithDuration: 0.1 position: r];
     id animSpawn = [CCSpawn actions: actionBackMove, actionBackScale, nil];
     [insprite runAction: animSpawn];
 }
