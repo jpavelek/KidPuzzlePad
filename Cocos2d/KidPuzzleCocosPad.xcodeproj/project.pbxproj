@@ -91,6 +91,7 @@
 		6560BEB9152AEE1300223248 /* lil_devil.png in Resources */ = {isa = PBXBuildFile; fileRef = 6560BEB8152AEE1300223248 /* lil_devil.png */; };
 		6560BEBB152AF17700223248 /* aquarium_board.png in Resources */ = {isa = PBXBuildFile; fileRef = 6560BEBA152AF17700223248 /* aquarium_board.png */; };
 		6560BEBD152AF83200223248 /* butterfly_board.png in Resources */ = {isa = PBXBuildFile; fileRef = 6560BEBC152AF83200223248 /* butterfly_board.png */; };
+		6560BEC3152B03CC00223248 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 6560BEC2152B03CC00223248 /* Default.png */; };
 		6565A59A1528F855006719D1 /* bbfish_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = 6565A5941528F855006719D1 /* bbfish_thumb.png */; };
 		6565A59C1528F855006719D1 /* fish_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = 6565A5961528F855006719D1 /* fish_thumb.png */; };
 		6565A59D1528F855006719D1 /* pets_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = 6565A5971528F855006719D1 /* pets_thumb.png */; };
@@ -431,6 +432,7 @@
 		6560BEB8152AEE1300223248 /* lil_devil.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lil_devil.png; sourceTree = "<group>"; };
 		6560BEBA152AF17700223248 /* aquarium_board.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = aquarium_board.png; sourceTree = "<group>"; };
 		6560BEBC152AF83200223248 /* butterfly_board.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = butterfly_board.png; sourceTree = "<group>"; };
+		6560BEC2152B03CC00223248 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		6565A5941528F855006719D1 /* bbfish_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bbfish_thumb.png; sourceTree = "<group>"; };
 		6565A5961528F855006719D1 /* fish_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fish_thumb.png; sourceTree = "<group>"; };
 		6565A5971528F855006719D1 /* pets_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pets_thumb.png; sourceTree = "<group>"; };
@@ -953,6 +955,7 @@
 				6565A5AE15298E27006719D1 /* back.png */,
 				50F414ED1069373D002A0D5E /* fps_images.png */,
 				6560BEB8152AEE1300223248 /* lil_devil.png */,
+				6560BEC2152B03CC00223248 /* Default.png */,
 				50F414EF1069373D002A0D5E /* Info.plist */,
 			);
 			path = Resources;
@@ -1474,6 +1477,7 @@
 				6560BEB9152AEE1300223248 /* lil_devil.png in Resources */,
 				6560BEBB152AF17700223248 /* aquarium_board.png in Resources */,
 				6560BEBD152AF83200223248 /* butterfly_board.png in Resources */,
+				6560BEC3152B03CC00223248 /* Default.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
