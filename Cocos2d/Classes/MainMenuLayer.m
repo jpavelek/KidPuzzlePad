@@ -16,6 +16,7 @@
 #import "BoardSimplePuppy.h"
 #import "BoardButterfly.h"
 #import "BoardPets.h"
+#import "BoardAquarium.h"
 
 
 @implementation MainMenuLayer
@@ -78,7 +79,7 @@
     NSLog(@"Index %d", index);
     switch (index) {
         case 0:
-            [[CCDirector sharedDirector] pushScene: [BoardPuppy scene]];
+            [[CCDirector sharedDirector] pushScene: [BoardAquarium scene]];
             break;
         case 1:
             [[CCDirector sharedDirector] pushScene: [BoardPuppy scene]];
