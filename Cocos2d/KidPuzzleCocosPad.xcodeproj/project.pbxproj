@@ -81,6 +81,14 @@
 		6560BEA1152A440300223248 /* a_star.png in Resources */ = {isa = PBXBuildFile; fileRef = 6560BE9B152A440300223248 /* a_star.png */; };
 		6560BEA2152A440300223248 /* a_yellow.png in Resources */ = {isa = PBXBuildFile; fileRef = 6560BE9C152A440300223248 /* a_yellow.png */; };
 		6560BEA3152A440300223248 /* aquarium_board.png in Resources */ = {isa = PBXBuildFile; fileRef = 6560BE9D152A440300223248 /* aquarium_board.png */; };
+		6560BEAA152ACAA400223248 /* a2_fish.png in Resources */ = {isa = PBXBuildFile; fileRef = 6560BEA4152ACAA400223248 /* a2_fish.png */; };
+		6560BEAB152ACAA400223248 /* a2_jellyfish.png in Resources */ = {isa = PBXBuildFile; fileRef = 6560BEA5152ACAA400223248 /* a2_jellyfish.png */; };
+		6560BEAC152ACAA400223248 /* a2_redfish.png in Resources */ = {isa = PBXBuildFile; fileRef = 6560BEA6152ACAA400223248 /* a2_redfish.png */; };
+		6560BEAD152ACAA400223248 /* a2_star.png in Resources */ = {isa = PBXBuildFile; fileRef = 6560BEA7152ACAA400223248 /* a2_star.png */; };
+		6560BEAE152ACAA400223248 /* a2_yellow.png in Resources */ = {isa = PBXBuildFile; fileRef = 6560BEA8152ACAA400223248 /* a2_yellow.png */; };
+		6560BEB2152ACACA00223248 /* BoardAquarium2.h in Headers */ = {isa = PBXBuildFile; fileRef = 6560BEB0152ACACA00223248 /* BoardAquarium2.h */; };
+		6560BEB3152ACACA00223248 /* BoardAquarium2.m in Sources */ = {isa = PBXBuildFile; fileRef = 6560BEB1152ACACA00223248 /* BoardAquarium2.m */; };
+		6560BEB5152AE06D00223248 /* aquarium2_board.png in Resources */ = {isa = PBXBuildFile; fileRef = 6560BEB4152AE06D00223248 /* aquarium2_board.png */; };
 		6565A59A1528F855006719D1 /* bbfish_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = 6565A5941528F855006719D1 /* bbfish_thumb.png */; };
 		6565A59C1528F855006719D1 /* fish_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = 6565A5961528F855006719D1 /* fish_thumb.png */; };
 		6565A59D1528F855006719D1 /* pets_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = 6565A5971528F855006719D1 /* pets_thumb.png */; };
@@ -412,6 +420,14 @@
 		6560BE9B152A440300223248 /* a_star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = a_star.png; sourceTree = "<group>"; };
 		6560BE9C152A440300223248 /* a_yellow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = a_yellow.png; sourceTree = "<group>"; };
 		6560BE9D152A440300223248 /* aquarium_board.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = aquarium_board.png; sourceTree = "<group>"; };
+		6560BEA4152ACAA400223248 /* a2_fish.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = a2_fish.png; sourceTree = "<group>"; };
+		6560BEA5152ACAA400223248 /* a2_jellyfish.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = a2_jellyfish.png; sourceTree = "<group>"; };
+		6560BEA6152ACAA400223248 /* a2_redfish.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = a2_redfish.png; sourceTree = "<group>"; };
+		6560BEA7152ACAA400223248 /* a2_star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = a2_star.png; sourceTree = "<group>"; };
+		6560BEA8152ACAA400223248 /* a2_yellow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = a2_yellow.png; sourceTree = "<group>"; };
+		6560BEB0152ACACA00223248 /* BoardAquarium2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BoardAquarium2.h; sourceTree = "<group>"; };
+		6560BEB1152ACACA00223248 /* BoardAquarium2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BoardAquarium2.m; sourceTree = "<group>"; };
+		6560BEB4152AE06D00223248 /* aquarium2_board.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = aquarium2_board.png; sourceTree = "<group>"; };
 		6565A5941528F855006719D1 /* bbfish_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bbfish_thumb.png; sourceTree = "<group>"; };
 		6565A5961528F855006719D1 /* fish_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fish_thumb.png; sourceTree = "<group>"; };
 		6565A5971528F855006719D1 /* pets_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pets_thumb.png; sourceTree = "<group>"; };
@@ -759,6 +775,8 @@
 				65F0965A1524455600AD71D3 /* Bit.m */,
 				6560BE95152A432300223248 /* BoardAquarium.h */,
 				6560BE96152A432300223248 /* BoardAquarium.m */,
+				6560BEB0152ACACA00223248 /* BoardAquarium2.h */,
+				6560BEB1152ACACA00223248 /* BoardAquarium2.m */,
 				6565A5BC152993BA006719D1 /* BoardBBFish.h */,
 				6565A5BD152993BA006719D1 /* BoardBBFish.m */,
 				6560BE71152A2F2900223248 /* BoardButterfly.h */,
@@ -874,6 +892,12 @@
 				6560BE9B152A440300223248 /* a_star.png */,
 				6560BE9C152A440300223248 /* a_yellow.png */,
 				6560BE9D152A440300223248 /* aquarium_board.png */,
+				6560BEA4152ACAA400223248 /* a2_fish.png */,
+				6560BEA5152ACAA400223248 /* a2_jellyfish.png */,
+				6560BEA6152ACAA400223248 /* a2_redfish.png */,
+				6560BEA7152ACAA400223248 /* a2_star.png */,
+				6560BEB4152AE06D00223248 /* aquarium2_board.png */,
+				6560BEA8152ACAA400223248 /* a2_yellow.png */,
 				6565A5B215299374006719D1 /* bbfish_fin.png */,
 				6565A5B315299374006719D1 /* bbfish_forehead.png */,
 				65CA3A8E1529D27D00F4157D /* bbfish_belly.png */,
@@ -1285,6 +1309,7 @@
 				E0ECA3BF134E5E5600E7A048 /* CJSONScanner.h in Headers */,
 				E0ECA3C1134E5E5600E7A048 /* CJSONSerializer.h in Headers */,
 				E0ECA3C3134E5E5600E7A048 /* JSONRepresentation.h in Headers */,
+				6560BEB2152ACACA00223248 /* BoardAquarium2.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1439,6 +1464,12 @@
 				6560BEA1152A440300223248 /* a_star.png in Resources */,
 				6560BEA2152A440300223248 /* a_yellow.png in Resources */,
 				6560BEA3152A440300223248 /* aquarium_board.png in Resources */,
+				6560BEAA152ACAA400223248 /* a2_fish.png in Resources */,
+				6560BEAB152ACAA400223248 /* a2_jellyfish.png in Resources */,
+				6560BEAC152ACAA400223248 /* a2_redfish.png in Resources */,
+				6560BEAD152ACAA400223248 /* a2_star.png in Resources */,
+				6560BEAE152ACAA400223248 /* a2_yellow.png in Resources */,
+				6560BEB5152AE06D00223248 /* aquarium2_board.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1564,6 +1595,7 @@
 				E0ECA3BE134E5E5600E7A048 /* CJSONDeserializer.m in Sources */,
 				E0ECA3C0134E5E5600E7A048 /* CJSONScanner.m in Sources */,
 				E0ECA3C2134E5E5600E7A048 /* CJSONSerializer.m in Sources */,
+				6560BEB3152ACACA00223248 /* BoardAquarium2.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
