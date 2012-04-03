@@ -63,7 +63,6 @@
 		6560BE6F152A2B9900223248 /* simplepuppy_front.png in Resources */ = {isa = PBXBuildFile; fileRef = 6560BE6C152A2B9900223248 /* simplepuppy_front.png */; };
 		6560BE70152A2B9900223248 /* simplepuppy_head.png in Resources */ = {isa = PBXBuildFile; fileRef = 6560BE6D152A2B9900223248 /* simplepuppy_head.png */; };
 		6560BE73152A2F2900223248 /* BoardButterfly.m in Sources */ = {isa = PBXBuildFile; fileRef = 6560BE72152A2F2900223248 /* BoardButterfly.m */; };
-		6560BE7F152A32D300223248 /* butterfly_board.png in Resources */ = {isa = PBXBuildFile; fileRef = 6560BE7E152A32D300223248 /* butterfly_board.png */; };
 		6560BE84152A32E300223248 /* butterfly_left_bottom.png in Resources */ = {isa = PBXBuildFile; fileRef = 6560BE80152A32E300223248 /* butterfly_left_bottom.png */; };
 		6560BE85152A32E300223248 /* butterfly_left_top.png in Resources */ = {isa = PBXBuildFile; fileRef = 6560BE81152A32E300223248 /* butterfly_left_top.png */; };
 		6560BE86152A32E300223248 /* butterfly_right_bottom.png in Resources */ = {isa = PBXBuildFile; fileRef = 6560BE82152A32E300223248 /* butterfly_right_bottom.png */; };
@@ -80,7 +79,6 @@
 		6560BEA0152A440300223248 /* a_redfish.png in Resources */ = {isa = PBXBuildFile; fileRef = 6560BE9A152A440300223248 /* a_redfish.png */; };
 		6560BEA1152A440300223248 /* a_star.png in Resources */ = {isa = PBXBuildFile; fileRef = 6560BE9B152A440300223248 /* a_star.png */; };
 		6560BEA2152A440300223248 /* a_yellow.png in Resources */ = {isa = PBXBuildFile; fileRef = 6560BE9C152A440300223248 /* a_yellow.png */; };
-		6560BEA3152A440300223248 /* aquarium_board.png in Resources */ = {isa = PBXBuildFile; fileRef = 6560BE9D152A440300223248 /* aquarium_board.png */; };
 		6560BEAA152ACAA400223248 /* a2_fish.png in Resources */ = {isa = PBXBuildFile; fileRef = 6560BEA4152ACAA400223248 /* a2_fish.png */; };
 		6560BEAB152ACAA400223248 /* a2_jellyfish.png in Resources */ = {isa = PBXBuildFile; fileRef = 6560BEA5152ACAA400223248 /* a2_jellyfish.png */; };
 		6560BEAC152ACAA400223248 /* a2_redfish.png in Resources */ = {isa = PBXBuildFile; fileRef = 6560BEA6152ACAA400223248 /* a2_redfish.png */; };
@@ -89,6 +87,10 @@
 		6560BEB2152ACACA00223248 /* BoardAquarium2.h in Headers */ = {isa = PBXBuildFile; fileRef = 6560BEB0152ACACA00223248 /* BoardAquarium2.h */; };
 		6560BEB3152ACACA00223248 /* BoardAquarium2.m in Sources */ = {isa = PBXBuildFile; fileRef = 6560BEB1152ACACA00223248 /* BoardAquarium2.m */; };
 		6560BEB5152AE06D00223248 /* aquarium2_board.png in Resources */ = {isa = PBXBuildFile; fileRef = 6560BEB4152AE06D00223248 /* aquarium2_board.png */; };
+		6560BEB7152AEB6300223248 /* redfish_board.png in Resources */ = {isa = PBXBuildFile; fileRef = 6560BEB6152AEB6300223248 /* redfish_board.png */; };
+		6560BEB9152AEE1300223248 /* lil_devil.png in Resources */ = {isa = PBXBuildFile; fileRef = 6560BEB8152AEE1300223248 /* lil_devil.png */; };
+		6560BEBB152AF17700223248 /* aquarium_board.png in Resources */ = {isa = PBXBuildFile; fileRef = 6560BEBA152AF17700223248 /* aquarium_board.png */; };
+		6560BEBD152AF83200223248 /* butterfly_board.png in Resources */ = {isa = PBXBuildFile; fileRef = 6560BEBC152AF83200223248 /* butterfly_board.png */; };
 		6565A59A1528F855006719D1 /* bbfish_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = 6565A5941528F855006719D1 /* bbfish_thumb.png */; };
 		6565A59C1528F855006719D1 /* fish_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = 6565A5961528F855006719D1 /* fish_thumb.png */; };
 		6565A59D1528F855006719D1 /* pets_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = 6565A5971528F855006719D1 /* pets_thumb.png */; };
@@ -129,7 +131,6 @@
 		65CA3AC71529ED5D00F4157D /* redfish_tailsection.png in Resources */ = {isa = PBXBuildFile; fileRef = 65CA3AC11529ED5D00F4157D /* redfish_tailsection.png */; };
 		65CA3ACA1529ED7600F4157D /* BoardRedfish.m in Sources */ = {isa = PBXBuildFile; fileRef = 65CA3AC91529ED7600F4157D /* BoardRedfish.m */; };
 		65CA3ACC1529EF8B00F4157D /* redfish_fin.png in Resources */ = {isa = PBXBuildFile; fileRef = 65CA3ACB1529EF8B00F4157D /* redfish_fin.png */; };
-		65CA3ACE1529EF9800F4157D /* redfish_board.png in Resources */ = {isa = PBXBuildFile; fileRef = 65CA3ACD1529EF9800F4157D /* redfish_board.png */; };
 		65F095941523B83300AD71D3 /* puppy_board.png in Resources */ = {isa = PBXBuildFile; fileRef = 65F095931523B83300AD71D3 /* puppy_board.png */; };
 		65F095A51523B9B700AD71D3 /* tray.png in Resources */ = {isa = PBXBuildFile; fileRef = 65F095A41523B9B700AD71D3 /* tray.png */; };
 		65F0965B1524455600AD71D3 /* Bit.m in Sources */ = {isa = PBXBuildFile; fileRef = 65F0965A1524455600AD71D3 /* Bit.m */; };
@@ -400,7 +401,6 @@
 		6560BE6D152A2B9900223248 /* simplepuppy_head.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = simplepuppy_head.png; sourceTree = "<group>"; };
 		6560BE71152A2F2900223248 /* BoardButterfly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BoardButterfly.h; sourceTree = "<group>"; };
 		6560BE72152A2F2900223248 /* BoardButterfly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BoardButterfly.m; sourceTree = "<group>"; };
-		6560BE7E152A32D300223248 /* butterfly_board.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = butterfly_board.png; sourceTree = "<group>"; };
 		6560BE80152A32E300223248 /* butterfly_left_bottom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = butterfly_left_bottom.png; sourceTree = "<group>"; };
 		6560BE81152A32E300223248 /* butterfly_left_top.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = butterfly_left_top.png; sourceTree = "<group>"; };
 		6560BE82152A32E300223248 /* butterfly_right_bottom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = butterfly_right_bottom.png; sourceTree = "<group>"; };
@@ -419,7 +419,6 @@
 		6560BE9A152A440300223248 /* a_redfish.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = a_redfish.png; sourceTree = "<group>"; };
 		6560BE9B152A440300223248 /* a_star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = a_star.png; sourceTree = "<group>"; };
 		6560BE9C152A440300223248 /* a_yellow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = a_yellow.png; sourceTree = "<group>"; };
-		6560BE9D152A440300223248 /* aquarium_board.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = aquarium_board.png; sourceTree = "<group>"; };
 		6560BEA4152ACAA400223248 /* a2_fish.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = a2_fish.png; sourceTree = "<group>"; };
 		6560BEA5152ACAA400223248 /* a2_jellyfish.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = a2_jellyfish.png; sourceTree = "<group>"; };
 		6560BEA6152ACAA400223248 /* a2_redfish.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = a2_redfish.png; sourceTree = "<group>"; };
@@ -428,6 +427,10 @@
 		6560BEB0152ACACA00223248 /* BoardAquarium2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BoardAquarium2.h; sourceTree = "<group>"; };
 		6560BEB1152ACACA00223248 /* BoardAquarium2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BoardAquarium2.m; sourceTree = "<group>"; };
 		6560BEB4152AE06D00223248 /* aquarium2_board.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = aquarium2_board.png; sourceTree = "<group>"; };
+		6560BEB6152AEB6300223248 /* redfish_board.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = redfish_board.png; sourceTree = "<group>"; };
+		6560BEB8152AEE1300223248 /* lil_devil.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lil_devil.png; sourceTree = "<group>"; };
+		6560BEBA152AF17700223248 /* aquarium_board.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = aquarium_board.png; sourceTree = "<group>"; };
+		6560BEBC152AF83200223248 /* butterfly_board.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = butterfly_board.png; sourceTree = "<group>"; };
 		6565A5941528F855006719D1 /* bbfish_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bbfish_thumb.png; sourceTree = "<group>"; };
 		6565A5961528F855006719D1 /* fish_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fish_thumb.png; sourceTree = "<group>"; };
 		6565A5971528F855006719D1 /* pets_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pets_thumb.png; sourceTree = "<group>"; };
@@ -472,7 +475,6 @@
 		65CA3AC81529ED7600F4157D /* BoardRedfish.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BoardRedfish.h; sourceTree = "<group>"; };
 		65CA3AC91529ED7600F4157D /* BoardRedfish.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BoardRedfish.m; sourceTree = "<group>"; };
 		65CA3ACB1529EF8B00F4157D /* redfish_fin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = redfish_fin.png; sourceTree = "<group>"; };
-		65CA3ACD1529EF9800F4157D /* redfish_board.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = redfish_board.png; sourceTree = "<group>"; };
 		65F095931523B83300AD71D3 /* puppy_board.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = puppy_board.png; sourceTree = "<group>"; };
 		65F095A41523B9B700AD71D3 /* tray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tray.png; sourceTree = "<group>"; };
 		65F096591524455600AD71D3 /* Bit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bit.h; sourceTree = "<group>"; };
@@ -891,7 +893,7 @@
 				6560BE9A152A440300223248 /* a_redfish.png */,
 				6560BE9B152A440300223248 /* a_star.png */,
 				6560BE9C152A440300223248 /* a_yellow.png */,
-				6560BE9D152A440300223248 /* aquarium_board.png */,
+				6560BEBA152AF17700223248 /* aquarium_board.png */,
 				6560BEA4152ACAA400223248 /* a2_fish.png */,
 				6560BEA5152ACAA400223248 /* a2_jellyfish.png */,
 				6560BEA6152ACAA400223248 /* a2_redfish.png */,
@@ -908,7 +910,7 @@
 				6560BE81152A32E300223248 /* butterfly_left_top.png */,
 				6560BE82152A32E300223248 /* butterfly_right_bottom.png */,
 				6560BE83152A32E300223248 /* butterfly_right_top.png */,
-				6560BE7E152A32D300223248 /* butterfly_board.png */,
+				6560BEBC152AF83200223248 /* butterfly_board.png */,
 				65CA3ABA1529E73100F4157D /* fish_bottom.png */,
 				65CA3AB81529E6EE00F4157D /* fish_bottom_left.png */,
 				65CA3AA91529E37C00F4157D /* fish_center.png */,
@@ -940,7 +942,7 @@
 				65CA3ABF1529ED5D00F4157D /* redfish_head.png */,
 				65CA3AC01529ED5D00F4157D /* redfish_tail.png */,
 				65CA3AC11529ED5D00F4157D /* redfish_tailsection.png */,
-				65CA3ACD1529EF9800F4157D /* redfish_board.png */,
+				6560BEB6152AEB6300223248 /* redfish_board.png */,
 				6560BE6B152A2B9900223248 /* simplepuppy_back.png */,
 				6560BE6C152A2B9900223248 /* simplepuppy_front.png */,
 				6560BE6D152A2B9900223248 /* simplepuppy_head.png */,
@@ -950,6 +952,7 @@
 				654BC2641523A828003604D4 /* icon.png */,
 				6565A5AE15298E27006719D1 /* back.png */,
 				50F414ED1069373D002A0D5E /* fps_images.png */,
+				6560BEB8152AEE1300223248 /* lil_devil.png */,
 				50F414EF1069373D002A0D5E /* Info.plist */,
 			);
 			path = Resources;
@@ -1442,13 +1445,11 @@
 				65CA3AC61529ED5D00F4157D /* redfish_tail.png in Resources */,
 				65CA3AC71529ED5D00F4157D /* redfish_tailsection.png in Resources */,
 				65CA3ACC1529EF8B00F4157D /* redfish_fin.png in Resources */,
-				65CA3ACE1529EF9800F4157D /* redfish_board.png in Resources */,
 				6560BE64152A27DD00223248 /* simplepuppy_ball.png in Resources */,
 				6560BE65152A27DD00223248 /* simplepuppy_board.png in Resources */,
 				6560BE6E152A2B9900223248 /* simplepuppy_back.png in Resources */,
 				6560BE6F152A2B9900223248 /* simplepuppy_front.png in Resources */,
 				6560BE70152A2B9900223248 /* simplepuppy_head.png in Resources */,
-				6560BE7F152A32D300223248 /* butterfly_board.png in Resources */,
 				6560BE84152A32E300223248 /* butterfly_left_bottom.png in Resources */,
 				6560BE85152A32E300223248 /* butterfly_left_top.png in Resources */,
 				6560BE86152A32E300223248 /* butterfly_right_bottom.png in Resources */,
@@ -1463,13 +1464,16 @@
 				6560BEA0152A440300223248 /* a_redfish.png in Resources */,
 				6560BEA1152A440300223248 /* a_star.png in Resources */,
 				6560BEA2152A440300223248 /* a_yellow.png in Resources */,
-				6560BEA3152A440300223248 /* aquarium_board.png in Resources */,
 				6560BEAA152ACAA400223248 /* a2_fish.png in Resources */,
 				6560BEAB152ACAA400223248 /* a2_jellyfish.png in Resources */,
 				6560BEAC152ACAA400223248 /* a2_redfish.png in Resources */,
 				6560BEAD152ACAA400223248 /* a2_star.png in Resources */,
 				6560BEAE152ACAA400223248 /* a2_yellow.png in Resources */,
 				6560BEB5152AE06D00223248 /* aquarium2_board.png in Resources */,
+				6560BEB7152AEB6300223248 /* redfish_board.png in Resources */,
+				6560BEB9152AEE1300223248 /* lil_devil.png in Resources */,
+				6560BEBB152AF17700223248 /* aquarium_board.png in Resources */,
+				6560BEBD152AF83200223248 /* butterfly_board.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

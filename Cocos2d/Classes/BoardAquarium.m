@@ -45,6 +45,7 @@
         [bits addObject:b5];
         
         tilecount = 5;
+
     }
     return self;
 }
