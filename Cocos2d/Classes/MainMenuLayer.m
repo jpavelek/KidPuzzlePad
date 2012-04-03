@@ -17,7 +17,7 @@
 #import "BoardButterfly.h"
 #import "BoardPets.h"
 #import "BoardAquarium.h"
-
+#import "BoardAquarium2.h"
 
 @implementation MainMenuLayer
 
@@ -33,7 +33,7 @@
 {
 	if( (self=[super init])) {
         boards = [NSArray arrayWithObjects:@"aquarium_thumb.png",
-                  @"aquarium2_thumb.png",
+                  @"bbfish_thumb.png",
                   @"nothing_thumb.png",
                   @"info_thumb.png",
                   @"redfish_thumb.png",
@@ -41,7 +41,7 @@
                   @"butterfly_thumb.png",
                   @"pets_thumb.png",
                   @"puppy_thumb.png",
-                  @"bbfish_thumb.png",
+                  @"aquarium2_thumb.png",
                   @"kitten_thumb.png",
                   @"fish_thumb.png",
                   nil];
@@ -82,15 +82,13 @@
             [[CCDirector sharedDirector] pushScene: [BoardAquarium scene]];
             break;
         case 1:
-            [[CCDirector sharedDirector] pushScene: [BoardPuppy scene]];
+            [[CCDirector sharedDirector] pushScene: [BoardBBFish scene]];
             break;
         case 2:
             NSLog(@"Do nothing");
-            //[[CCDirector sharedDirector] pushScene: [BoardPuppy scene]];
             break;
         case 3:
             NSLog(@"INFO");
-            //[[CCDirector sharedDirector] pushScene: [BoardPuppy scene]];
             break;
         case 4:
             [[CCDirector sharedDirector] pushScene: [BoardRedfish scene]];
@@ -108,7 +106,7 @@
             [[CCDirector sharedDirector] pushScene: [BoardPuppy scene]];
             break;
         case 9:
-            [[CCDirector sharedDirector] pushScene: [BoardBBFish scene]];
+            [[CCDirector sharedDirector] pushScene: [BoardAquarium2 scene]];
             break;
         case 10:
             [[CCDirector sharedDirector] pushScene: [BoardKitten scene]];
