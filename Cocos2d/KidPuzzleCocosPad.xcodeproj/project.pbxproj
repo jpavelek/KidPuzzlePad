@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 45;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -55,7 +55,9 @@
 		651BECC215272E2E006A8307 /* kitten_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = 651BECC115272E2E006A8307 /* kitten_thumb.png */; };
 		651BECC715272EB7006A8307 /* MainMenuLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 651BECC615272EB7006A8307 /* MainMenuLayer.m */; };
 		651BECCD15289740006A8307 /* fabric.png in Resources */ = {isa = PBXBuildFile; fileRef = 651BECCC15289740006A8307 /* fabric.png */; };
-		654BC2651523A828003604D4 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 654BC2641523A828003604D4 /* icon.png */; };
+		651F212115345AA100C35BAB /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 651F212015345AA100C35BAB /* Icon.png */; };
+		651F212315345B1C00C35BAB /* pets_board.png in Resources */ = {isa = PBXBuildFile; fileRef = 651F212215345B1C00C35BAB /* pets_board.png */; };
+		652E7B4F152E30550000C83A /* Default-Landscape~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 652E7B4E152E30550000C83A /* Default-Landscape~ipad.png */; };
 		6560BE64152A27DD00223248 /* simplepuppy_ball.png in Resources */ = {isa = PBXBuildFile; fileRef = 6560BE5F152A27DD00223248 /* simplepuppy_ball.png */; };
 		6560BE65152A27DD00223248 /* simplepuppy_board.png in Resources */ = {isa = PBXBuildFile; fileRef = 6560BE60152A27DD00223248 /* simplepuppy_board.png */; };
 		6560BE6A152A27F800223248 /* BoardSimplePuppy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6560BE69152A27F800223248 /* BoardSimplePuppy.m */; };
@@ -67,7 +69,6 @@
 		6560BE85152A32E300223248 /* butterfly_left_top.png in Resources */ = {isa = PBXBuildFile; fileRef = 6560BE81152A32E300223248 /* butterfly_left_top.png */; };
 		6560BE86152A32E300223248 /* butterfly_right_bottom.png in Resources */ = {isa = PBXBuildFile; fileRef = 6560BE82152A32E300223248 /* butterfly_right_bottom.png */; };
 		6560BE87152A32E300223248 /* butterfly_right_top.png in Resources */ = {isa = PBXBuildFile; fileRef = 6560BE83152A32E300223248 /* butterfly_right_top.png */; };
-		6560BE89152A35A900223248 /* pets_board.png in Resources */ = {isa = PBXBuildFile; fileRef = 6560BE88152A35A900223248 /* pets_board.png */; };
 		6560BE8E152A35B900223248 /* pets_bunny.png in Resources */ = {isa = PBXBuildFile; fileRef = 6560BE8A152A35B900223248 /* pets_bunny.png */; };
 		6560BE8F152A35B900223248 /* pets_butterfly.png in Resources */ = {isa = PBXBuildFile; fileRef = 6560BE8B152A35B900223248 /* pets_butterfly.png */; };
 		6560BE90152A35B900223248 /* pets_kitten.png in Resources */ = {isa = PBXBuildFile; fileRef = 6560BE8C152A35B900223248 /* pets_kitten.png */; };
@@ -92,6 +93,10 @@
 		6560BEBB152AF17700223248 /* aquarium_board.png in Resources */ = {isa = PBXBuildFile; fileRef = 6560BEBA152AF17700223248 /* aquarium_board.png */; };
 		6560BEBD152AF83200223248 /* butterfly_board.png in Resources */ = {isa = PBXBuildFile; fileRef = 6560BEBC152AF83200223248 /* butterfly_board.png */; };
 		6560BEC3152B03CC00223248 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 6560BEC2152B03CC00223248 /* Default.png */; };
+		6560BEC6152C541900223248 /* smiley_happy.png in Resources */ = {isa = PBXBuildFile; fileRef = 6560BEC4152C541900223248 /* smiley_happy.png */; };
+		6560BEC7152C541900223248 /* smiley_sad.png in Resources */ = {isa = PBXBuildFile; fileRef = 6560BEC5152C541900223248 /* smiley_sad.png */; };
+		6560BEC9152C545000223248 /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = 6560BEC8152C545000223248 /* home.png */; };
+		6560BECC152C547500223248 /* InfoLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6560BECB152C547500223248 /* InfoLayer.m */; };
 		6565A59A1528F855006719D1 /* bbfish_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = 6565A5941528F855006719D1 /* bbfish_thumb.png */; };
 		6565A59C1528F855006719D1 /* fish_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = 6565A5961528F855006719D1 /* fish_thumb.png */; };
 		6565A59D1528F855006719D1 /* pets_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = 6565A5971528F855006719D1 /* pets_thumb.png */; };
@@ -392,7 +397,10 @@
 		651BECC515272EB7006A8307 /* MainMenuLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMenuLayer.h; sourceTree = "<group>"; };
 		651BECC615272EB7006A8307 /* MainMenuLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainMenuLayer.m; sourceTree = "<group>"; wrapsLines = 0; };
 		651BECCC15289740006A8307 /* fabric.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fabric.png; sourceTree = "<group>"; };
-		654BC2641523A828003604D4 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		651F212015345AA100C35BAB /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = ../../../../Projects/GIT/KidPuzzlePad/Cocos2d/Resources/Icon.png; sourceTree = "<group>"; };
+		651F212215345B1C00C35BAB /* pets_board.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = pets_board.png; path = ../../../../Projects/GIT/KidPuzzlePad/Cocos2d/Resources/pets_board.png; sourceTree = "<group>"; };
+		652E7B4D152E2F420000C83A /* KidPuzzleCocosPad.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = KidPuzzleCocosPad.entitlements; sourceTree = "<group>"; };
+		652E7B4E152E30550000C83A /* Default-Landscape~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape~ipad.png"; sourceTree = "<group>"; };
 		6560BE5F152A27DD00223248 /* simplepuppy_ball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = simplepuppy_ball.png; sourceTree = "<group>"; };
 		6560BE60152A27DD00223248 /* simplepuppy_board.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = simplepuppy_board.png; sourceTree = "<group>"; };
 		6560BE68152A27F800223248 /* BoardSimplePuppy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BoardSimplePuppy.h; sourceTree = "<group>"; };
@@ -406,7 +414,6 @@
 		6560BE81152A32E300223248 /* butterfly_left_top.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = butterfly_left_top.png; sourceTree = "<group>"; };
 		6560BE82152A32E300223248 /* butterfly_right_bottom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = butterfly_right_bottom.png; sourceTree = "<group>"; };
 		6560BE83152A32E300223248 /* butterfly_right_top.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = butterfly_right_top.png; sourceTree = "<group>"; };
-		6560BE88152A35A900223248 /* pets_board.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pets_board.png; sourceTree = "<group>"; };
 		6560BE8A152A35B900223248 /* pets_bunny.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pets_bunny.png; sourceTree = "<group>"; };
 		6560BE8B152A35B900223248 /* pets_butterfly.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pets_butterfly.png; sourceTree = "<group>"; };
 		6560BE8C152A35B900223248 /* pets_kitten.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pets_kitten.png; sourceTree = "<group>"; };
@@ -433,6 +440,11 @@
 		6560BEBA152AF17700223248 /* aquarium_board.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = aquarium_board.png; sourceTree = "<group>"; };
 		6560BEBC152AF83200223248 /* butterfly_board.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = butterfly_board.png; sourceTree = "<group>"; };
 		6560BEC2152B03CC00223248 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		6560BEC4152C541900223248 /* smiley_happy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = smiley_happy.png; sourceTree = "<group>"; };
+		6560BEC5152C541900223248 /* smiley_sad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = smiley_sad.png; sourceTree = "<group>"; };
+		6560BEC8152C545000223248 /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home.png; sourceTree = "<group>"; };
+		6560BECA152C547400223248 /* InfoLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoLayer.h; sourceTree = "<group>"; };
+		6560BECB152C547500223248 /* InfoLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoLayer.m; sourceTree = "<group>"; wrapsLines = 0; };
 		6565A5941528F855006719D1 /* bbfish_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bbfish_thumb.png; sourceTree = "<group>"; };
 		6565A5961528F855006719D1 /* fish_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fish_thumb.png; sourceTree = "<group>"; };
 		6565A5971528F855006719D1 /* pets_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pets_thumb.png; sourceTree = "<group>"; };
@@ -728,6 +740,8 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				652E7B4E152E30550000C83A /* Default-Landscape~ipad.png */,
+				652E7B4D152E2F420000C83A /* KidPuzzleCocosPad.entitlements */,
 				504DFC6810AF1739006D82FE /* LICENSE.cocos2d */,
 				504DFC6910AF1739006D82FE /* LICENSE.cocosdenshion */,
 				506EDAA3102F461B00A389B3 /* cocos2d Sources */,
@@ -799,6 +813,8 @@
 				6560BE69152A27F800223248 /* BoardSimplePuppy.m */,
 				651BECC515272EB7006A8307 /* MainMenuLayer.h */,
 				651BECC615272EB7006A8307 /* MainMenuLayer.m */,
+				6560BECA152C547400223248 /* InfoLayer.h */,
+				6560BECB152C547500223248 /* InfoLayer.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -868,7 +884,6 @@
 		50F414EB1069373D002A0D5E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				651BECCC15289740006A8307 /* fabric.png */,
 				651BECB31526DABF006A8307 /* app-6.wav */,
 				651BECB41526DABF006A8307 /* button-pressed.wav */,
 				651BECBB1526DAF1006A8307 /* dialog-error.wav */,
@@ -930,7 +945,7 @@
 				6560BE8B152A35B900223248 /* pets_butterfly.png */,
 				6560BE8C152A35B900223248 /* pets_kitten.png */,
 				6560BE8D152A35B900223248 /* pets_puppy.png */,
-				6560BE88152A35A900223248 /* pets_board.png */,
+				651F212215345B1C00C35BAB /* pets_board.png */,
 				65F0993C1525CF6B00AD71D3 /* puppy_back_leg.png */,
 				65F0993D1525CF6B00AD71D3 /* puppy_ball.png */,
 				65F0993E1525CF6B00AD71D3 /* puppy_leg.png */,
@@ -950,12 +965,16 @@
 				6560BE6D152A2B9900223248 /* simplepuppy_head.png */,
 				6560BE5F152A27DD00223248 /* simplepuppy_ball.png */,
 				6560BE60152A27DD00223248 /* simplepuppy_board.png */,
+				651BECCC15289740006A8307 /* fabric.png */,
 				65F095A41523B9B700AD71D3 /* tray.png */,
-				654BC2641523A828003604D4 /* icon.png */,
 				6565A5AE15298E27006719D1 /* back.png */,
 				50F414ED1069373D002A0D5E /* fps_images.png */,
 				6560BEB8152AEE1300223248 /* lil_devil.png */,
+				6560BEC8152C545000223248 /* home.png */,
+				6560BEC4152C541900223248 /* smiley_happy.png */,
+				6560BEC5152C541900223248 /* smiley_sad.png */,
 				6560BEC2152B03CC00223248 /* Default.png */,
+				651F212015345AA100C35BAB /* Icon.png */,
 				50F414EF1069373D002A0D5E /* Info.plist */,
 			);
 			path = Resources;
@@ -1363,10 +1382,11 @@
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastUpgradeCheck = 0430;
 				ORGANIZATIONNAME = Afte9;
 			};
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "KidPuzzleCocosPad" */;
-			compatibilityVersion = "Xcode 3.1";
+			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 1;
 			knownRegions = (
@@ -1391,7 +1411,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				50F414F11069373D002A0D5E /* fps_images.png in Resources */,
-				654BC2651523A828003604D4 /* icon.png in Resources */,
 				65F095941523B83300AD71D3 /* puppy_board.png in Resources */,
 				65F095A51523B9B700AD71D3 /* tray.png in Resources */,
 				65F096AF15249B2900AD71D3 /* puppy_head.png in Resources */,
@@ -1457,7 +1476,6 @@
 				6560BE85152A32E300223248 /* butterfly_left_top.png in Resources */,
 				6560BE86152A32E300223248 /* butterfly_right_bottom.png in Resources */,
 				6560BE87152A32E300223248 /* butterfly_right_top.png in Resources */,
-				6560BE89152A35A900223248 /* pets_board.png in Resources */,
 				6560BE8E152A35B900223248 /* pets_bunny.png in Resources */,
 				6560BE8F152A35B900223248 /* pets_butterfly.png in Resources */,
 				6560BE90152A35B900223248 /* pets_kitten.png in Resources */,
@@ -1478,6 +1496,12 @@
 				6560BEBB152AF17700223248 /* aquarium_board.png in Resources */,
 				6560BEBD152AF83200223248 /* butterfly_board.png in Resources */,
 				6560BEC3152B03CC00223248 /* Default.png in Resources */,
+				6560BEC6152C541900223248 /* smiley_happy.png in Resources */,
+				6560BEC7152C541900223248 /* smiley_sad.png in Resources */,
+				6560BEC9152C545000223248 /* home.png in Resources */,
+				652E7B4F152E30550000C83A /* Default-Landscape~ipad.png in Resources */,
+				651F212115345AA100C35BAB /* Icon.png in Resources */,
+				651F212315345B1C00C35BAB /* pets_board.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1503,6 +1527,7 @@
 				6560BE73152A2F2900223248 /* BoardButterfly.m in Sources */,
 				6560BE94152A35C900223248 /* BoardPets.m in Sources */,
 				6560BE97152A432300223248 /* BoardAquarium.m in Sources */,
+				6560BECC152C547500223248 /* InfoLayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1622,24 +1647,26 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Jakub Pavelek (WZVPJGVXUP)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_DYNAMIC_NO_PIC = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = KidPuzzleCocosPad_Prefix.pch;
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = Resources/Info.plist;
-				ONLY_ACTIVE_ARCH = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 3.2;
+				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = (
 					"-all_load",
 					"-ObjC",
 				);
-				PREBINDING = NO;
 				PRODUCT_NAME = KidPuzzleCocosPad;
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "78FA819A-C995-4D8A-8926-94FC7F9D3CF1";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				TARGETED_DEVICE_FAMILY = 2;
 				WARNING_CFLAGS = "-Wall";
 			};
@@ -1649,20 +1676,24 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Jakub Pavelek (WZVPJGVXUP)";
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_DYNAMIC_NO_PIC = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = KidPuzzleCocosPad_Prefix.pch;
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 3.2;
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = (
 					"-all_load",
 					"-ObjC",
 				);
-				PREBINDING = NO;
 				PRODUCT_NAME = KidPuzzleCocosPad;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "F3C585A0-B355-48A1-82D9-3B145AAB55A6";
 				TARGETED_DEVICE_FAMILY = 2;
 				WARNING_CFLAGS = "-Wall";
 			};
@@ -1673,11 +1704,14 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = NO;
-				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_DYNAMIC_NO_PIC = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
-				PREBINDING = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				PRODUCT_NAME = "cocos2d libraries";
+				SKIP_INSTALL = YES;
+				STRIP_INSTALLED_PRODUCT = YES;
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
@@ -1687,13 +1721,88 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_DYNAMIC_NO_PIC = YES;
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
-				PREBINDING = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				PRODUCT_NAME = "cocos2d libraries";
+				SKIP_INSTALL = YES;
+				STRIP_INSTALLED_PRODUCT = YES;
+				TARGETED_DEVICE_FAMILY = 2;
 				ZERO_LINK = NO;
 			};
 			name = Release;
+		};
+		651F211B15330FBE00C35BAB /* DistributionX */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Jakub Pavelek (WZVPJGVXUP)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Jakub Pavelek (WZVPJGVXUP)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					NS_BLOCK_ASSERTIONS,
+					NDEBUG,
+				);
+				"GCC_THUMB_SUPPORT[arch=armv6]" = NO;
+				"GCC_THUMB_SUPPORT[arch=armv7]" = YES;
+				GCC_UNROLL_LOOPS = YES;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "78FA819A-C995-4D8A-8926-94FC7F9D3CF1";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "78FA819A-C995-4D8A-8926-94FC7F9D3CF1";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = NO;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = DistributionX;
+		};
+		651F211C15330FBE00C35BAB /* DistributionX */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Jakub Pavelek (WZVPJGVXUP)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_DYNAMIC_NO_PIC = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = KidPuzzleCocosPad_Prefix.pch;
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INFOPLIST_FILE = Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 3.2;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
+				PRODUCT_NAME = KidPuzzleCocosPad;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "78FA819A-C995-4D8A-8926-94FC7F9D3CF1";
+				TARGETED_DEVICE_FAMILY = 2;
+				WARNING_CFLAGS = "-Wall";
+			};
+			name = DistributionX;
+		};
+		651F211D15330FBE00C35BAB /* DistributionX */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_DYNAMIC_NO_PIC = YES;
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				PRODUCT_NAME = "cocos2d libraries";
+				SKIP_INSTALL = YES;
+				STRIP_INSTALLED_PRODUCT = YES;
+				TARGETED_DEVICE_FAMILY = 2;
+				ZERO_LINK = NO;
+			};
+			name = DistributionX;
 		};
 		C01FCF4F08A954540054247B /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -1714,9 +1823,9 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
 				ONLY_ACTIVE_ARCH = YES;
-				PREBINDING = NO;
 				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				SKIP_INSTALL = NO;
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
@@ -1725,7 +1834,8 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Jakub Pavelek (WZVPJGVXUP)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Jakub Pavelek (WZVPJGVXUP)";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					NS_BLOCK_ASSERTIONS,
@@ -1738,9 +1848,12 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
-				PREBINDING = NO;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "78FA819A-C995-4D8A-8926-94FC7F9D3CF1";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "78FA819A-C995-4D8A-8926-94FC7F9D3CF1";
 				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				SKIP_INSTALL = NO;
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};
@@ -1752,6 +1865,7 @@
 			buildConfigurations = (
 				1D6058940D05DD3E006BFB54 /* Debug */,
 				1D6058950D05DD3E006BFB54 /* Release */,
+				651F211C15330FBE00C35BAB /* DistributionX */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1761,6 +1875,7 @@
 			buildConfigurations = (
 				506EE05F10304ED500A389B3 /* Debug */,
 				506EE06010304ED500A389B3 /* Release */,
+				651F211D15330FBE00C35BAB /* DistributionX */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1770,6 +1885,7 @@
 			buildConfigurations = (
 				C01FCF4F08A954540054247B /* Debug */,
 				C01FCF5008A954540054247B /* Release */,
+				651F211B15330FBE00C35BAB /* DistributionX */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

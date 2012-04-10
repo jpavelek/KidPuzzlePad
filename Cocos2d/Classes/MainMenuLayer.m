@@ -18,6 +18,7 @@
 #import "BoardPets.h"
 #import "BoardAquarium.h"
 #import "BoardAquarium2.h"
+#import "InfoLayer.h"
 
 @implementation MainMenuLayer
 
@@ -88,7 +89,7 @@
             NSLog(@"Do nothing");
             break;
         case 3:
-            NSLog(@"INFO");
+            [[CCDirector sharedDirector] pushScene: [InfoLayer scene]];
             break;
         case 4:
             [[CCDirector sharedDirector] pushScene: [BoardRedfish scene]];

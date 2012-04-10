@@ -17,30 +17,30 @@
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
-         shouldBeEnabled = "Yes"
+         shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Classes/GameLayer.m"
-         timestampString = "355062581.110282"
+         timestampString = "355751529.164767"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "73"
-         endingLineNumber = "73"
-         landmarkName = "-ccTouchesBegan:withEvent:"
+         startingLineNumber = "128"
+         endingLineNumber = "128"
+         landmarkName = "-popBalloons"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
-         shouldBeEnabled = "Yes"
+         shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Classes/GameLayer.m"
-         timestampString = "355062581.110282"
+         timestampString = "355226836.501704"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "124"
-         endingLineNumber = "124"
-         landmarkName = "-popBalloons"
-         landmarkType = "5">
+         startingLineNumber = "24"
+         endingLineNumber = "24"
+         landmarkName = "@implementation GameLayer"
+         landmarkType = "3">
       </FileBreakpoint>
    </FileBreakpoints>
 </Bucket>

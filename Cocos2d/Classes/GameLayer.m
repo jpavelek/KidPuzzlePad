@@ -55,26 +55,30 @@
     UITouch *touch = [touches anyObject];
     if (touch) {
         CGPoint location = [self convertTouchToNodeSpace: touch];
-        currentBit = nil;
-        for (Bit *bit in bits) {
-            if (CGRectContainsPoint(bit.insprite.boundingBox, location)) {
-                currentBit = bit;
-                if (bit.locked == NO) {
-                    [bit pop];
-                    [self reorderChild:bit.insprite z:bit.zorder+100];
-                    [self ccTouchesMoved:touches withEvent:event];
-                } 
-            }
-        }
-        if (CGRectContainsPoint(back.boundingBox, location)) {
-            [[CCDirector sharedDirector] popScene];
-        }
+        
         for (CCSprite *s in balloons) {
             if (CGRectContainsPoint(s.boundingBox, location)) {
                 [[SimpleAudioEngine sharedEngine] playEffect:@"pop.wav"];
                 [s removeFromParentAndCleanup:YES];
                 [balloons removeObject:s];
-                break;
+                //break;
+                return;
+            }
+        }
+        if (CGRectContainsPoint(back.boundingBox, location)) {
+            [[CCDirector sharedDirector] popScene];
+            return;
+        } else {
+            currentBit = nil;
+            for (Bit *bit in bits) {
+                if (CGRectContainsPoint(bit.insprite.boundingBox, location)) {
+                    currentBit = bit;
+                    if (bit.locked == NO) {
+                        [bit pop];
+                        [self reorderChild:bit.insprite z:bit.zorder+100];
+                        [self ccTouchesMoved:touches withEvent:event];
+                    } 
+                }
             }
         }
     }
