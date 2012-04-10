@@ -128,15 +128,6 @@
          stdDeviation="1.9658253"
          id="feGaussianBlur48317" />
     </filter>
-    <filter
-       id="filter10718-3"
-       inkscape:collect="always"
-       color-interpolation-filters="sRGB">
-      <feGaussianBlur
-         id="feGaussianBlur10720-3"
-         stdDeviation="1.9896342"
-         inkscape:collect="always" />
-    </filter>
     <linearGradient
        id="linearGradient7215-4">
       <stop
@@ -8008,5 +7999,37 @@
         </g>
       </g>
     </g>
+    <rect
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       inkscape:export-filename="/Users/jpavelek/Projects/GIT/KidPuzzlePad/Resources/Store/splash_l.png"
+       y="1511.9729"
+       x="661.54987"
+       height="768"
+       width="1024"
+       id="rect7518"
+       style="color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#rect78332"
+       id="use7520"
+       transform="translate(1184.7864,161.65138)"
+       width="1024"
+       height="150"
+       inkscape:export-filename="/Users/jpavelek/Projects/GIT/KidPuzzlePad/Resources/Store/splash_l.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#g77524"
+       id="use7522"
+       transform="translate(1184.7864,161.65138)"
+       width="1024"
+       height="150"
+       inkscape:export-filename="/Users/jpavelek/Projects/GIT/KidPuzzlePad/Resources/Store/splash_l.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
   </g>
 </svg>
