@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>KidPuzzleCocosPadFree.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
 		<key>KidPuzzleCocosPad.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -23,6 +28,11 @@
 			<true/>
 		</dict>
 		<key>506EE05D10304ED200A389B3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>65D07E19156BD3A600CDFC03</key>
 		<dict>
 			<key>primary</key>
 			<true/>

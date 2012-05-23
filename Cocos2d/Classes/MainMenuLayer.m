@@ -33,6 +33,18 @@
 -(id) init
 {
 	if( (self=[super init])) {
+#if defined(FREE_VERSION)
+        NSLog(@"FREE");
+        fullgame = NO;
+#else
+#if defined(FULL_VERSION)
+        NSLog(@"FULL version");
+        fullgame = YES;
+#else
+        NSLog(@"ERROR - not sure what version this is!");
+        fullgame = NO;
+#endif
+#endif
         boards = [NSArray arrayWithObjects:@"aquarium_thumb.png",
                   @"bbfish_thumb.png",
                   @"nothing_thumb.png",
@@ -51,7 +63,7 @@
         bg.position = ccp(0,0);
         [self addChild: bg];
         
-        for (int i=0; i<12; i++) {
+        for (int i=0; i<12; i++) {                    
             int x,y;
             x = (i%4)*256;
             y = (i/4)*256;
@@ -63,8 +75,18 @@
             [self addChild:p];
             id opacity = [CCActionTween actionWithDuration:(0.2 + 0.2*(random()%10)) key:@"opacity" from:0.5 to:255];
             [p runAction: opacity];
+            if (fullgame == NO) {
+                if ((i%4 != 0) && (i!=2) && (i!=3)) { 
+                    //TODO Overlay lock over those thumbnails
+                    CCSprite* o = [CCSprite spriteWithFile:@"lock_overlay_thumb.png"];
+                    o.anchorPoint =  CGPointMake(0.0, 0.0);
+                    o.position = p.positionInPixels;
+                    [self addChild: o];
+                }
+            }
         }
         self.isTouchEnabled = YES;
+
     }
     return self;
 }

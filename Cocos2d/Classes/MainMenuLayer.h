@@ -11,6 +11,7 @@
 
 @interface MainMenuLayer : CCLayer {
     NSArray* boards;
+    Boolean fullgame;
 }
 
 +(CCScene *) scene;

@@ -15,6 +15,7 @@
     CCSprite *happy;
     CCSprite *sad;
     CCSprite *home;
+    NSMutableArray* promos;
 }
 
 // returns a CCScene that contains the GameLayer as the only child

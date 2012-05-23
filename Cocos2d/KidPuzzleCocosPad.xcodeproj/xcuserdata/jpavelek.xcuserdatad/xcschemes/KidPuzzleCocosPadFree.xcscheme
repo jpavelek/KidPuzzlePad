@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0430"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,9 +13,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "1D6058900D05DD3D006BFB54"
-               BuildableName = "KidPuzzleCocosPad.app"
-               BlueprintName = "KidPuzzleCocosPad"
+               BlueprintIdentifier = "65D07E19156BD3A600CDFC03"
+               BuildableName = "KidPuzzleCocosPadFree.app"
+               BlueprintName = "KidPuzzleCocosPadFree"
                ReferencedContainer = "container:KidPuzzleCocosPad.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -32,9 +31,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "1D6058900D05DD3D006BFB54"
-            BuildableName = "KidPuzzleCocosPad.app"
-            BlueprintName = "KidPuzzleCocosPad"
+            BlueprintIdentifier = "65D07E19156BD3A600CDFC03"
+            BuildableName = "KidPuzzleCocosPadFree.app"
+            BlueprintName = "KidPuzzleCocosPadFree"
             ReferencedContainer = "container:KidPuzzleCocosPad.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -47,14 +46,13 @@
       buildConfiguration = "Debug"
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
-      enablesOpenGLESFrameCapture = "YES"
       allowLocationSimulation = "YES">
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "1D6058900D05DD3D006BFB54"
-            BuildableName = "KidPuzzleCocosPad.app"
-            BlueprintName = "KidPuzzleCocosPad"
+            BlueprintIdentifier = "65D07E19156BD3A600CDFC03"
+            BuildableName = "KidPuzzleCocosPadFree.app"
+            BlueprintName = "KidPuzzleCocosPadFree"
             ReferencedContainer = "container:KidPuzzleCocosPad.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -70,9 +68,9 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "1D6058900D05DD3D006BFB54"
-            BuildableName = "KidPuzzleCocosPad.app"
-            BlueprintName = "KidPuzzleCocosPad"
+            BlueprintIdentifier = "65D07E19156BD3A600CDFC03"
+            BuildableName = "KidPuzzleCocosPadFree.app"
+            BlueprintName = "KidPuzzleCocosPadFree"
             ReferencedContainer = "container:KidPuzzleCocosPad.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -81,7 +79,7 @@
       buildConfiguration = "Debug">
    </AnalyzeAction>
    <ArchiveAction
-      buildConfiguration = "DistributionX"
+      buildConfiguration = "Release"
       revealArchiveInOrganizer = "YES">
    </ArchiveAction>
 </Scheme>

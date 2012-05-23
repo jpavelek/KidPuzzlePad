@@ -20,9 +20,32 @@
 }
 
 
+int
+downloadPromos(void) 
+{
+    NSURL *url = [NSURL URLWithString:@"http://www.afte9.com/promo/com.afte9.puzzlefortoddlers/promo.txt"];
+    NSData *urlData = [NSData dataWithContentsOfURL:url];
+    if ([urlData length] < 1) {
+        NSLog(@"Did not receive any promos");
+        return 0;
+    } else NSLog(@"Got %d of data", [urlData length]);
+    
+    NSLog(@"Got promos");
+    
+    NSData *version = [urlData valueForKey:@"version"];
+    NSData *count = [urlData valueForKey:@"count"];
+    NSString *vs = [NSString stringWithCString:[version bytes] encoding:NSUTF8StringEncoding];
+    NSString *cs = [NSString stringWithCString:[count bytes] encoding:NSUTF8StringEncoding];
+    NSLog(@"Got version %@ and count %@", vs, cs);
+    
+    return 3; //FIXME
+}
+
+
 -(id) init
 {
 	if( (self=[super init])) {
+        promos = [[NSMutableArray alloc] init];
         bg = [CCSprite spriteWithFile: @"fabric.png"];
         bg.anchorPoint = CGPointMake(0.0, 0.0);
         [self addChild: bg];
@@ -40,9 +63,32 @@
         sad.position = ccp(300, 430);
         [self addChild:sad];
         
+        int promocount = downloadPromos();
+        int promowidth = 167;
+        int margin = (1024 - ((promocount +1)*promowidth))/(2+promocount);
+
         home = [CCSprite spriteWithFile:@"home.png"];
-        home.position = ccp(512, 100);
+        home.anchorPoint = CGPointMake(0.0, 0.0);
+        home.position = ccp(margin, 50);
         [self addChild:home];
+        
+        CCSprite* p1 = [CCSprite spriteWithFile:@"promo1.png"];
+        p1.anchorPoint = CGPointMake(0.0, 0.0);
+        p1.position = ccp(2*margin+promowidth,50);
+        [self addChild:p1];
+        [promos addObject:p1];
+        
+        CCSprite* p2 = [CCSprite spriteWithFile:@"promo2.png"];
+        p2.position = ccp(3*margin+2*promowidth,50);
+        p2.anchorPoint = CGPointMake(0.0, 0.0);
+        [self addChild:p2];
+        [promos addObject:p2];
+        
+        CCSprite* p3 = [CCSprite spriteWithFile:@"promo3.png"];
+        p3.anchorPoint = CGPointMake(0.0, 0.0);
+        p3.position = ccp(4*margin+3*promowidth,50);
+        [self addChild:p3];
+        [promos addObject:p3];
         
         self.isTouchEnabled = YES;
 	}
@@ -65,8 +111,16 @@
         [[UIApplication sharedApplication] openURL:[NSURL URLWithString:str]];
     } else if (CGRectContainsPoint(sad.boundingBox, location)) {
         [[UIApplication sharedApplication] openURL: [NSURL URLWithString:@"https://github.com/jpavelek/KidPuzzle/issues"]];
-    } else {
+    } else if (CGRectContainsPoint(home.boundingBox, location)) {
         [[UIApplication sharedApplication] openURL: [NSURL URLWithString:@"http://www.afte9.com"]];
+    } else {
+        NSLog(@"Test promos");
+        for (CCSprite *s in promos) {
+            if (CGRectContainsPoint(s.boundingBox, location)) {
+                NSLog(@"Clicked promo ");
+                break;
+            }
+        }
     }
     return YES;
 }
