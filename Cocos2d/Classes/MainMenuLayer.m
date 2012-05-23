@@ -77,7 +77,7 @@
             [p runAction: opacity];
             if (fullgame == NO) {
                 if ((i%4 != 0) && (i!=2) && (i!=3)) { 
-                    //TODO Overlay lock over those thumbnails
+                    //TODO Overlay a lock over those thumbnails
                     CCSprite* o = [CCSprite spriteWithFile:@"lock_overlay_thumb.png"];
                     o.anchorPoint =  CGPointMake(0.0, 0.0);
                     o.position = p.positionInPixels;
@@ -99,13 +99,12 @@
 - (BOOL)ccTouchBegan:(UITouch *)touch withEvent:(UIEvent *)event {
     CGPoint location = [self convertTouchToNodeSpace: touch];
     int index = 4*(((int)location.y)/256) + ((int)location.x)/256;
-    NSLog(@"Index %d", index);
     switch (index) {
         case 0:
             [[CCDirector sharedDirector] pushScene: [BoardAquarium scene]];
             break;
         case 1:
-            [[CCDirector sharedDirector] pushScene: [BoardBBFish scene]];
+            if (fullgame == YES) [[CCDirector sharedDirector] pushScene: [BoardBBFish scene]]; else NSLog(@"Go purchase");
             break;
         case 2:
             NSLog(@"Do nothing");
@@ -117,25 +116,25 @@
             [[CCDirector sharedDirector] pushScene: [BoardRedfish scene]];
             break;
         case 5:
-            [[CCDirector sharedDirector] pushScene: [BoardSimplePuppy scene]];
+            if (fullgame == YES) [[CCDirector sharedDirector] pushScene: [BoardSimplePuppy scene]]; else NSLog(@"Go purchase");
             break;
         case 6:
-            [[CCDirector sharedDirector] pushScene: [BoardButterfly scene]];
+            if (fullgame == YES) [[CCDirector sharedDirector] pushScene: [BoardButterfly scene]]; else NSLog(@"Go purchase");
             break;
         case 7:
-            [[CCDirector sharedDirector] pushScene: [BoardPets scene]];
+            if (fullgame == YES) [[CCDirector sharedDirector] pushScene: [BoardPets scene]]; else NSLog(@"Go purchase");
             break;
         case 8:
             [[CCDirector sharedDirector] pushScene: [BoardPuppy scene]];
             break;
         case 9:
-            [[CCDirector sharedDirector] pushScene: [BoardAquarium2 scene]];
+            if (fullgame == YES) [[CCDirector sharedDirector] pushScene: [BoardAquarium2 scene]]; else NSLog(@"Go purchase");
             break;
         case 10:
-            [[CCDirector sharedDirector] pushScene: [BoardKitten scene]];
+            if (fullgame == YES) [[CCDirector sharedDirector] pushScene: [BoardKitten scene]]; else NSLog(@"Go purchase");
             break;
         case 11:
-            [[CCDirector sharedDirector] pushScene: [BoardFish scene]];
+            if (fullgame == YES) [[CCDirector sharedDirector] pushScene: [BoardFish scene]]; else NSLog(@"Go purchase");
             break;
         default:
             break;

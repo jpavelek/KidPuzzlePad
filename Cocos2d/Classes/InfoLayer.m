@@ -23,6 +23,7 @@
 int
 downloadPromos(void) 
 {
+    /*
     NSURL *url = [NSURL URLWithString:@"http://www.afte9.com/promo/com.afte9.puzzlefortoddlers/promo.txt"];
     NSData *urlData = [NSData dataWithContentsOfURL:url];
     if ([urlData length] < 1) {
@@ -37,8 +38,8 @@ downloadPromos(void)
     NSString *vs = [NSString stringWithCString:[version bytes] encoding:NSUTF8StringEncoding];
     NSString *cs = [NSString stringWithCString:[count bytes] encoding:NSUTF8StringEncoding];
     NSLog(@"Got version %@ and count %@", vs, cs);
-    
-    return 3; //FIXME
+    */
+    return 0; //FIXME
 }
 
 
@@ -71,7 +72,7 @@ downloadPromos(void)
         home.anchorPoint = CGPointMake(0.0, 0.0);
         home.position = ccp(margin, 50);
         [self addChild:home];
-        
+/*        
         CCSprite* p1 = [CCSprite spriteWithFile:@"promo1.png"];
         p1.anchorPoint = CGPointMake(0.0, 0.0);
         p1.position = ccp(2*margin+promowidth,50);
@@ -89,7 +90,7 @@ downloadPromos(void)
         p3.position = ccp(4*margin+3*promowidth,50);
         [self addChild:p3];
         [promos addObject:p3];
-        
+*/        
         self.isTouchEnabled = YES;
 	}
 	return self;
