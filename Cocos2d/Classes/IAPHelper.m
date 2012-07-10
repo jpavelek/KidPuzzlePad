@@ -52,7 +52,6 @@
             NSLog(@"HELPER:Not purchased: %@", productIdentifier);
         }
         self.purchasedProducts = purchasedProducts;
-        
     }
     return self;
 }
@@ -71,6 +70,7 @@
     [[NSNotificationCenter defaultCenter] postNotificationName:kProductPurchasedNotification object:productIdentifier];
     
 }
+
 
 - (void)completeTransaction:(SKPaymentTransaction *)transaction {
     
@@ -93,10 +93,10 @@
 }
 
 - (void)failedTransaction:(SKPaymentTransaction *)transaction {
-    
+    NSLog(@"HELPER:transaction failed with error: %@", transaction.error.localizedDescription);
     if (transaction.error.code != SKErrorPaymentCancelled)
     {
-        NSLog(@"HELPER:Transaction error: %@", transaction.error.localizedDescription);
+        NSLog(@"HELPER:Payment canceled");
     }
     
     [[NSNotificationCenter defaultCenter] postNotificationName:kProductPurchaseFailedNotification object:transaction];
@@ -107,6 +107,7 @@
 
 - (void)paymentQueue:(SKPaymentQueue *)queue updatedTransactions:(NSArray *)transactions
 {
+    NSLog(@"HELPER:paymentQueue");
     for (SKPaymentTransaction *transaction in transactions)
     {
         switch (transaction.transactionState)
@@ -139,6 +140,7 @@
 
 - (void)dealloc
 {
+    NSLog(@"Helper DALOC");
     [_productIdentifiers release];
     _productIdentifiers = nil;
     [_products release];
