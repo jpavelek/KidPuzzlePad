@@ -15,6 +15,8 @@
     CCSprite *sproducts;
     CCSprite *spurchase;
     CCSprite *sdone;
+    CCSprite *sbuttonrestore;
+    CCSprite *sbuttonpurchase;
 }
 
 +(CCScene *) scene;

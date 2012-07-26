@@ -47,6 +47,8 @@
 		50F41332106926B2002A0D5E /* ZFont.h in Headers */ = {isa = PBXBuildFile; fileRef = 50F4130F106926B2002A0D5E /* ZFont.h */; };
 		50F41333106926B2002A0D5E /* ZFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 50F41310106926B2002A0D5E /* ZFont.m */; };
 		50F414F11069373D002A0D5E /* fps_images.png in Resources */ = {isa = PBXBuildFile; fileRef = 50F414ED1069373D002A0D5E /* fps_images.png */; };
+		6505317615C13BB400B26215 /* iap_purchase.png in Resources */ = {isa = PBXBuildFile; fileRef = 6505317415C13BB400B26215 /* iap_purchase.png */; };
+		6505317715C13BB400B26215 /* iap_restore.png in Resources */ = {isa = PBXBuildFile; fileRef = 6505317515C13BB400B26215 /* iap_restore.png */; };
 		65175AFC15A958F000E98612 /* FullUpgrade.m in Sources */ = {isa = PBXBuildFile; fileRef = 65175AFB15A958F000E98612 /* FullUpgrade.m */; };
 		65175B0115AC3A5F00E98612 /* connect_64x64.png in Resources */ = {isa = PBXBuildFile; fileRef = 65175AFD15AC3A5F00E98612 /* connect_64x64.png */; };
 		65175B0215AC3A5F00E98612 /* done_64x64.png in Resources */ = {isa = PBXBuildFile; fileRef = 65175AFE15AC3A5F00E98612 /* done_64x64.png */; };
@@ -548,6 +550,8 @@
 		50F41310106926B2002A0D5E /* ZFont.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZFont.m; sourceTree = "<group>"; };
 		50F414ED1069373D002A0D5E /* fps_images.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fps_images.png; sourceTree = "<group>"; };
 		50F414EF1069373D002A0D5E /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6505317415C13BB400B26215 /* iap_purchase.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iap_purchase.png; sourceTree = "<group>"; };
+		6505317515C13BB400B26215 /* iap_restore.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iap_restore.png; sourceTree = "<group>"; };
 		65175AFA15A958F000E98612 /* FullUpgrade.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FullUpgrade.h; sourceTree = "<group>"; };
 		65175AFB15A958F000E98612 /* FullUpgrade.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FullUpgrade.m; sourceTree = "<group>"; };
 		65175AFD15AC3A5F00E98612 /* connect_64x64.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = connect_64x64.png; sourceTree = "<group>"; };
@@ -1218,6 +1222,8 @@
 				65175AFE15AC3A5F00E98612 /* done_64x64.png */,
 				65175AFF15AC3A5F00E98612 /* products_64x64.png */,
 				65175B0015AC3A5F00E98612 /* purchase_64x64.png */,
+				6505317415C13BB400B26215 /* iap_purchase.png */,
+				6505317515C13BB400B26215 /* iap_restore.png */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -1890,6 +1896,8 @@
 				65175B0215AC3A5F00E98612 /* done_64x64.png in Resources */,
 				65175B0315AC3A5F00E98612 /* products_64x64.png in Resources */,
 				65175B0415AC3A5F00E98612 /* purchase_64x64.png in Resources */,
+				6505317615C13BB400B26215 /* iap_purchase.png in Resources */,
+				6505317715C13BB400B26215 /* iap_restore.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

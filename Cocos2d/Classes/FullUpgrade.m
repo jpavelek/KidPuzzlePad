@@ -15,8 +15,9 @@
 
 #define kOpacityOff 20
 #define kStatusHeight 100
+#define kButtonsHeight 400
 
-typedef enum {eConnecting, eProducts, ePurchase, eDone} EStates;
+typedef enum {eNone, eConnecting, eProducts, ePurchase, eDone} EStates;
 
 
 @implementation FullUpgrade
@@ -58,31 +59,17 @@ typedef enum {eConnecting, eProducts, ePurchase, eDone} EStates;
         sdone.position = ccp(512+2*64+32, kStatusHeight);
         sdone.opacity = kOpacityOff;
         [self addChild: sdone];
-          
-        //Now, init the purchase right away
-        [self setProgress:eConnecting];
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(productsLoaded:) name:kProductsLoadedNotification object:nil];
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(productPurchased:) name:kProductPurchasedNotification object:nil];
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(productPurchaseFailed:) name:kProductPurchaseFailedNotification object: nil];
-        [[SKPaymentQueue defaultQueue] addTransactionObserver:[FullVersionIAHelper sharedHelper]];
         
-        Reachability *reach = [Reachability reachabilityForInternetConnection];	
-        NetworkStatus netStatus = [reach currentReachabilityStatus];    
-        if (netStatus == NotReachable) {        
-            NSLog(@"Abort - No internet connection!");  
-            //TODO play unhappy sound, blink, etc.
-        } else {
-            [self setProgress:eProducts];
-            if ([FullVersionIAHelper sharedHelper].products == nil) {
-                [[FullVersionIAHelper sharedHelper] requestProducts];
-            }  else {
-                [self setProgress:ePurchase];
-                SKProduct *product = [[FullVersionIAHelper sharedHelper].products objectAtIndex:0];
-                [NSObject cancelPreviousPerformRequestsWithTarget:self];
-                NSLog(@"Products already loaded - lets buy %@ right away", product.productIdentifier);
-                [[FullVersionIAHelper sharedHelper] buyProductIdentifier:product.productIdentifier];
-            }
-        }
+        sbuttonrestore = [CCSprite spriteWithFile:@"iap_restore.png"];
+        sbuttonrestore.anchorPoint = CGPointMake(0.5, 1.0);
+        sbuttonrestore.position = ccp(512 - 128, kButtonsHeight);
+        [self addChild:sbuttonrestore];
+        
+        sbuttonpurchase = [CCSprite spriteWithFile:@"iap_purchase.png"];
+        sbuttonpurchase.anchorPoint = CGPointMake(0.5, 1.0);
+        sbuttonpurchase.position = ccp(512+128, kButtonsHeight);
+        [self addChild:sbuttonpurchase];
+
     }
     return self;
 }
@@ -91,7 +78,7 @@ typedef enum {eConnecting, eProducts, ePurchase, eDone} EStates;
     [self setProgress:ePurchase];
     SKProduct *product = [[FullVersionIAHelper sharedHelper].products objectAtIndex:0];
     [NSObject cancelPreviousPerformRequestsWithTarget:self];
-    NSLog(@"@productsLoaded - lets buy %@ right away", product.productIdentifier);
+    NSLog(@"@productsLoaded - lets buy %@ now", product.productIdentifier);
     [[FullVersionIAHelper sharedHelper] buyProductIdentifier:product.productIdentifier];
 }
 
@@ -109,7 +96,11 @@ typedef enum {eConnecting, eProducts, ePurchase, eDone} EStates;
 }
 
 - (void)productPurchaseFailed:(NSNotification *)notification {
-    NSLog(@"TODO - purchase fail not implemented on UI level yet");
+    NSLog(@"ERROR: Purchase failed");
+    [self setProgress:eNone];
+    [sbuttonrestore setVisible:YES];
+    [sbuttonpurchase setVisible:YES];
+    
 }
 
 - (void)ccTouchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
@@ -119,13 +110,74 @@ typedef enum {eConnecting, eProducts, ePurchase, eDone} EStates;
         CGPoint location = [self convertTouchToNodeSpace: touch];
         
         if (CGRectContainsPoint(back.boundingBox, location)) {
-            NSLog(@"BACK - releasing");
             [[SKPaymentQueue defaultQueue] removeTransactionObserver:[FullVersionIAHelper sharedHelper]];
             [[NSNotificationCenter defaultCenter] removeObserver:self];
             
             [[CCDirector sharedDirector] replaceScene: [MainMenuLayer scene]];  
             return;
-        } 
+        } else if (CGRectContainsPoint(sbuttonpurchase.boundingBox, location) && (sbuttonpurchase.visible == YES)) {
+            //Now, init the purchase right away
+            [self makePurchase];
+        } else if (CGRectContainsPoint(sbuttonrestore.boundingBox, location) && (sbuttonrestore.visible == YES)) {
+            [self makeRestore];
+        }
+    }
+}
+
+- (void) makePurchase 
+{
+    [sbuttonrestore setVisible:NO];
+    [sbuttonpurchase setVisible:NO];
+    //Now, init the purchase right away
+    [self setProgress:eConnecting];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(productsLoaded:) name:kProductsLoadedNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(productPurchased:) name:kProductPurchasedNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(productPurchaseFailed:) name:kProductPurchaseFailedNotification object: nil];
+    [[SKPaymentQueue defaultQueue] addTransactionObserver:[FullVersionIAHelper sharedHelper]];
+    
+    Reachability *reach = [Reachability reachabilityForInternetConnection];	
+    NetworkStatus netStatus = [reach currentReachabilityStatus];    
+    if (netStatus == NotReachable) {        
+        NSLog(@"Abort - No internet connection!");
+        //TODO play unhappy sound, blink, etc.
+        [sbuttonrestore setVisible:YES];
+        [sbuttonpurchase setVisible:YES];
+    } else {
+        [self setProgress:eProducts];
+        if ([FullVersionIAHelper sharedHelper].products == nil) {
+            [[FullVersionIAHelper sharedHelper] requestProducts];
+        }  else {
+            [self setProgress:ePurchase];
+            SKProduct *product = [[FullVersionIAHelper sharedHelper].products objectAtIndex:0];
+            [NSObject cancelPreviousPerformRequestsWithTarget:self];
+            NSLog(@"Products already loaded - lets buy %@ right away", product.productIdentifier);
+            [[FullVersionIAHelper sharedHelper] buyProductIdentifier:product.productIdentifier];
+        }
+    }
+}
+
+- (void) makeRestore 
+{
+    [sbuttonrestore setVisible:NO];
+    [sbuttonpurchase setVisible:NO];
+    //Now, init the purchase right away
+    [self setProgress:eConnecting];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(productsLoaded:) name:kProductsLoadedNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(productPurchased:) name:kProductPurchasedNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(productPurchaseFailed:) name:kProductPurchaseFailedNotification object: nil];
+    [[SKPaymentQueue defaultQueue] addTransactionObserver:[FullVersionIAHelper sharedHelper]];
+    
+    Reachability *reach = [Reachability reachabilityForInternetConnection];	
+    NetworkStatus netStatus = [reach currentReachabilityStatus];    
+    if (netStatus == NotReachable) {        
+        NSLog(@"Abort - No internet connection!");  
+        //TODO play unhappy sound, blink, etc.
+        [sbuttonrestore setVisible:YES];
+        [sbuttonpurchase setVisible:YES];
+    } else {
+        NSLog(@"Restoring previous pruchases");
+        [self setProgress:eDone];
+        [[SKPaymentQueue defaultQueue] restoreCompletedTransactions];
     }
 }
 
@@ -144,6 +196,12 @@ typedef enum {eConnecting, eProducts, ePurchase, eDone} EStates;
     id repeatOpacityPulse = [CCRepeatForever actionWithAction:opacityPulse];
     
     switch (p) {
+        case eNone:
+            sconnect.opacity = kOpacityOff;
+            sproducts.opacity = kOpacityOff;
+            spurchase.opacity = kOpacityOff;
+            sdone.opacity = kOpacityOff;
+            break;
         case eConnecting:
             [sconnect runAction:repeatOpacityPulse];
             sproducts.opacity = kOpacityOff;
